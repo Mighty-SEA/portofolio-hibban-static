@@ -1,6 +1,4 @@
 ---
-import { Badge } from "@/components/ui/badge";
-
 const experiences = [
   {
     role: {
@@ -16,7 +14,6 @@ const experiences = [
       en: "Collaborating as a contract developer to design and build high-performance client web applications, including Veterinary Clinic platforms, dynamic Landing Pages, and integrated POS systems.",
       id: "Berkolaborasi sebagai pengembang kontrak untuk merancang dan membangun aplikasi web klien berkinerja tinggi, termasuk platform Klinik Hewan, Landing Page dinamis, dan sistem POS terintegrasi.",
     },
-    type: "Work",
   },
   {
     role: {
@@ -32,7 +29,6 @@ const experiences = [
       en: "Specialized in maintenance and repair of printers and computer systems. Frequently deployed onsite to perform network installations, cabling, configuration, and hardware troubleshooting.",
       id: "Spesialisasi dalam perawatan dan perbaikan printer serta sistem komputer. Ditugaskan di lokasi klien untuk melakukan instalasi jaringan, pengkabelan LAN, konfigurasi OS/server, dan troubleshooting hardware.",
     },
-    type: "Work",
   },
   {
     role: {
@@ -48,60 +44,80 @@ const experiences = [
       en: "Completed Bachelor's degree in Informatics Engineering. Developed a thesis project titled 'PriceBoost'—an application utilizing the XGBoost algorithm to generate selling price recommendations for Tokopedia products cross-validated with IBM SPSS.",
       id: "Menyelesaikan gelar Sarjana Teknik Informatika dengan riset tugas akhir berjudul 'PriceBoost'—aplikasi machine learning XGBoost untuk rekomendasi harga jual produk marketplace Tokopedia yang tervalidasi silang dengan IBM SPSS.",
     },
-    type: "Education",
   },
 ];
 ---
 
-<section id="experience" class="py-12 flex flex-col gap-8">
-  <!-- Section Title -->
-  <div class="flex flex-col gap-2">
-    <div class="inline-flex items-center gap-2">
-      <span class="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
-        <span data-lang-en>History</span>
-        <span data-lang-id>Riwayat Pengalaman</span>
-      </span>
+<section id="experience" class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+  <!-- Left Column: Title & Subtitle (Sticky on Desktop) -->
+  <div class="lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-24">
+    <div>
+      <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl uppercase text-black inline-block bg-neo-secondary border-3 border-black px-5 sm:px-6 py-2 shadow-neo transform -rotate-1 select-none">
+        <span data-lang-en>HISTORY</span>
+        <span data-lang-id>PENGALAMAN</span>
+      </h2>
     </div>
-    <p data-lang-en class="font-sans text-base text-black/70 max-w-2xl font-medium">
+    <p data-lang-en class="font-sans text-sm sm:text-base text-gray-700 font-medium leading-relaxed">
       My journey through professional work, technical support, and academic milestones.
     </p>
-    <p data-lang-id class="font-sans text-base text-black/70 max-w-2xl font-medium">
+    <p data-lang-id class="font-sans text-sm sm:text-base text-gray-700 font-medium leading-relaxed">
       Perjalanan profesional saya dalam pengembangan perangkat lunak, dukungan teknis IT, serta pencapaian akademis.
     </p>
   </div>
 
-  <!-- Timeline List -->
-  <div class="relative pl-6 sm:pl-8 border-l-3 border-border flex flex-col gap-8 ml-3">
+  <!-- Right Column: Interactive Animated Timeline with Scroll Progress -->
+  <div id="timeline-container" class="lg:col-span-8 flex flex-col gap-6 relative pl-6 sm:pl-8 ml-2 sm:ml-4">
+    <!-- Static Track Line -->
+    <div class="absolute left-0 top-3 bottom-3 w-[4px] bg-black/15 rounded-full"></div>
+
+    <!-- Animated Dynamic Scroll Fill Line -->
+    <div
+      id="timeline-progress-bar"
+      class="absolute left-0 top-3 w-[4px] bg-neo-secondary rounded-full transition-all duration-75 origin-top z-10"
+      style="height: 0%;"
+    ></div>
+
     {
       experiences.map((exp, index) => (
-        <div class="relative group">
-          {/* Dot Indicator */}
-          <div class="absolute -left-[37px] sm:-left-[45px] top-6 size-6 rounded-full bg-main border-2 border-border shadow-[2px_2px_0px_#000] flex items-center justify-center font-black text-xs">
-            {index + 1}
-          </div>
+        <div class="relative group" data-timeline-item={index}>
+          {/* Animated Timeline Dot Indicator */}
+          <div
+            class="timeline-dot absolute -left-[32px] sm:-left-[40px] top-6 size-5 rounded-full border-3 border-black bg-white z-20 shadow-[1px_1px_0px_#000] transition-colors duration-200"
+          ></div>
 
-          {/* Card */}
-          <div class="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all flex flex-col gap-3">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-border/20 pb-3">
-              <div>
-                <h3 class="font-heading font-black text-lg sm:text-xl uppercase text-foreground">
-                  <span data-lang-en>{exp.role.en}</span>
-                  <span data-lang-id>{exp.role.id}</span>
-                </h3>
-                <span class="font-display font-bold text-xs sm:text-sm text-foreground bg-main px-2 py-0.5 border border-border rounded-sm shadow-[1px_1px_0px_#000] inline-block mt-1">
-                  {exp.company}
-                </span>
+          {/* Brutal Card */}
+          <div class="relative group">
+            {/* Hard shadow layer */}
+            <div class="absolute inset-0 bg-black rounded-xl translate-x-1.5 translate-y-1.5 sm:translate-x-2 sm:translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-200 pointer-events-none"></div>
+
+            {/* Card Content */}
+            <div class="relative p-5 sm:p-6 bg-white border-3 border-black rounded-xl transition-all duration-200 flex flex-col gap-3">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-black pb-3">
+                <div class="flex flex-col gap-1 sm:gap-1.5">
+                  <h3 class="font-display font-black text-lg sm:text-xl uppercase text-black">
+                    <span data-lang-en>{exp.role.en}</span>
+                    <span data-lang-id>{exp.role.id}</span>
+                  </h3>
+                  <div>
+                    <span class="font-bold text-xs sm:text-sm text-neo-secondary uppercase bg-black px-2.5 py-0.5 rounded text-white inline-block">
+                      {exp.company}
+                    </span>
+                  </div>
+                </div>
+
+                <div class="shrink-0">
+                  <span class="font-display font-black text-xs sm:text-sm uppercase bg-neo-primary text-black px-3 py-1 border-2 border-black rounded-md shadow-neo-sm inline-block">
+                    <span data-lang-en>{exp.period.en}</span>
+                    <span data-lang-id>{exp.period.id}</span>
+                  </span>
+                </div>
               </div>
-              <Badge variant="neutral" className="w-fit font-mono text-xs font-bold">
-                <span data-lang-en>{exp.period.en}</span>
-                <span data-lang-id>{exp.period.id}</span>
-              </Badge>
-            </div>
 
-            <p class="font-sans text-sm sm:text-base text-black/80 leading-relaxed">
-              <span data-lang-en>{exp.desc.en}</span>
-              <span data-lang-id>{exp.desc.id}</span>
-            </p>
+              <p class="font-sans text-sm sm:text-base text-gray-800 leading-relaxed">
+                <span data-lang-en>{exp.desc.en}</span>
+                <span data-lang-id>{exp.desc.id}</span>
+              </p>
+            </div>
           </div>
         </div>
       ))
@@ -109,3 +125,54 @@ const experiences = [
   </div>
 </section>
 
+<script is:inline>
+  function setupTimelineProgress() {
+    const timeline = document.getElementById('timeline-container');
+    const progressBar = document.getElementById('timeline-progress-bar');
+    const dots = document.querySelectorAll('.timeline-dot');
+    if (!timeline || !progressBar) return;
+
+    let ticking = false;
+
+    function update() {
+      const rect = timeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const startY = windowHeight * 0.75;
+      const currentProgressY = startY - rect.top;
+      const totalHeight = rect.height;
+
+      const progress = Math.min(Math.max((currentProgressY / totalHeight) * 100, 0), 100);
+      progressBar.style.height = `${progress}%`;
+
+      dots.forEach((dot) => {
+        const dotRect = dot.getBoundingClientRect();
+        if (dotRect.top <= startY) {
+          dot.classList.remove('bg-white');
+          dot.classList.add('bg-neo-secondary');
+        } else {
+          dot.classList.remove('bg-neo-secondary');
+          dot.classList.add('bg-white');
+        }
+      });
+
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTimelineProgress);
+  } else {
+    setupTimelineProgress();
+  }
+</script>
