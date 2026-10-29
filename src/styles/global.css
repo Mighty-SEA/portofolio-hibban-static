@@ -93,12 +93,12 @@
 }
 
 :root {
-    --neo-bg: #FAF9F6;
+    --neo-bg: #FFFFFF;
     --neo-primary: #FFD23F;
     --neo-secondary: #FF6B6B;
     --neo-accent: #38BDF8;
     --neo-card: #FFFFFF;
-    --background: hsl(54, 92%, 88%);
+    --background: #FFFFFF;
     --foreground: oklch(0% 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
@@ -140,7 +140,7 @@
 
 /* Neobrutalism Theme Classes */
 .theme-sunny {
-  --neo-bg: #FAF9F6;
+  --neo-bg: #FFFFFF;
   --neo-primary: #FFD23F;
   --neo-secondary: #FF6B6B;
   --neo-accent: #38BDF8;
@@ -243,6 +243,7 @@
 
 /* Comic Halftone Dot Grid */
 .comic-dots {
+  background-color: #FFFFFF;
   background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
 }
