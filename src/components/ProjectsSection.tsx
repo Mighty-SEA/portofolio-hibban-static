@@ -298,10 +298,10 @@ export function ProjectsSection() {
       {/* Section Header */}
       <div className="flex flex-col gap-2 reveal">
         <div className="inline-flex items-center gap-2">
-          <span className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
+          <h2 className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
             <span data-lang-id>Proyek Pilihan & Studi Kasus</span>
             <span data-lang-en>Featured Projects & Case Studies</span>
-          </span>
+          </h2>
         </div>
         <p data-lang-id className="font-sans text-base text-black/80 max-w-2xl font-medium">
           Daftar aplikasi produksi, sistem microservices, dan arsitektur desktop yang pernah saya bangun. Dilengkapi analisis masalah, arsitektur, dan kode sumber.
@@ -464,7 +464,11 @@ export function ProjectsSection() {
                             : "border-border/60 opacity-60 hover:opacity-100"
                         }`}
                       >
-                        <img src={shot} alt="Thumbnail" className="w-full h-full object-cover" />
+                        <img
+                          src={shot}
+                          alt={`${selectedProject.title.en} screenshot ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
                       </button>
                     ))}
                   </div>

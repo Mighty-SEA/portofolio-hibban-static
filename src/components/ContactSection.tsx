@@ -95,10 +95,10 @@ export function ContactSection() {
       {/* Title */}
       <div className="flex flex-col gap-2 reveal">
         <div className="inline-flex items-center gap-2">
-          <span className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
+          <h2 className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
             <span data-lang-id>Mari Berdiskusi!</span>
             <span data-lang-en>Let's Talk!</span>
-          </span>
+          </h2>
         </div>
         <p data-lang-id className="font-sans text-base text-black/70 max-w-2xl font-medium">
           Tertarik untuk bekerja sama, mendiskusikan proyek freelance, atau sekadar berkonsultasi? Jangan ragu untuk menghubungi saya!

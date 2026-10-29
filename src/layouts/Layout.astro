@@ -89,9 +89,15 @@ const personSchema = {
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="application-name" content="Hibban Portfolio" />
     <meta name="theme-color" content="#FFD23F" />
+
+    <!-- Multilingual Alternate Hreflang Tags -->
+    <link rel="alternate" hreflang="id" href={canonicalURL} />
+    <link rel="alternate" hreflang="en" href={canonicalURL} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
     <!-- Mobile App Capabilities -->
     <meta name="mobile-web-app-capable" content="yes" />
@@ -101,6 +107,9 @@ const personSchema = {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hibban Habiburrahman" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -108,6 +117,8 @@ const personSchema = {
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Mighty_SEA" />
+    <meta name="twitter:creator" content="@Mighty_SEA" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -131,7 +142,7 @@ const personSchema = {
     <!-- JSON-LD Structured Data Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
-  <body class="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-main selection:text-black">
+  <body id="top" class="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-main selection:text-black">
     <slot />
 
     <!-- Scroll Reveal Intersection Observer (Muncul saat discroll, menghilang saat dilewati) -->
