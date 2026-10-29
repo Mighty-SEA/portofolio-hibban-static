@@ -71,13 +71,10 @@ echo "── 2. Mengekstrak file static baru ───────────�
 tar -xzf $REMOTE_TEMP_DIR/deploy.tar.gz -C $REMOTE_DIR/
 rm -rf $REMOTE_TEMP_DIR
 
-echo "── 3. Menyelaraskan PM2 static server (Port 38241) ────"
+echo "── 3. Membersihkan PM2 (karena Nginx sudah pure static) ──"
 if command -v pm2 &> /dev/null; then
-    # Jika Nginx server Anda masih me-reverse-proxy ke port 38241 (konfigurasi Nuxt lama):
-    # Kita jalankan PM2 serve bawaan agar port 38241 langsung melayani file static tanpa perlu ubah Nginx!
     pm2 delete portofolio-hibban 2>/dev/null || true
-    pm2 serve $REMOTE_DIR 38241 --name "portofolio-hibban" --spa
-    pm2 save
+    pm2 save 2>/dev/null || true
 fi
 
 echo "── 4. Reload Nginx (jika tersedia) ─────────────────────"
