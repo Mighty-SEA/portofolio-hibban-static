@@ -20,43 +20,69 @@ const fullImageUrl = new URL(image, siteUrl).toString();
 
 const personSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Hibban Habiburrahman",
-    "alternateName": "Hibban",
-    "image": `${siteUrl}/foto-profil.webp`,
-    "jobTitle": "Full-Stack Developer & IT Support",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bandung",
-      "addressRegion": "Jawa Barat",
-      "addressCountry": "ID"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": `${siteUrl}/`,
+      "name": "Hibban Habiburrahman Portfolio",
+      "description": description,
+      "inLanguage": ["id", "en"]
     },
-    "description": "Full-Stack Developer & IT Support based in Bandung. I build web and desktop apps using Golang, Laravel, and Nuxt 3—backed by hands-on experience as an IT support technician.",
-    "knowsAbout": [
-      "Web Developer",
-      "Web Development",
-      "Full Stack Web Developer",
-      "Software Engineer",
-      "Backend Developer",
-      "Frontend Developer",
-      "Golang",
-      "Laravel",
-      "Nuxt 3",
-      "Vue.js",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Supabase",
-      "IT Support",
-      "Hardware Troubleshooting",
-      "Printer Troubleshooting",
-      "Full-Stack Development"
-    ],
-    "sameAs": [
-      "https://github.com/Mighty-SEA"
-    ]
-  }
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profilepage`,
+      "url": canonicalURL,
+      "name": title,
+      "isPartOf": { "@id": `${siteUrl}/#website` },
+      "mainEntity": {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        "name": "Hibban Habiburrahman",
+        "alternateName": "Hibban",
+        "url": `${siteUrl}/`,
+        "image": `${siteUrl}/foto-profil.webp`,
+        "jobTitle": "Full-Stack Developer & IT Support",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "PT. Digital Rayafokus"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "STT Pratama Adi"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bandung",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        },
+        "description": description,
+        "knowsAbout": [
+          "Web Developer",
+          "Web Development",
+          "Full Stack Web Developer",
+          "Software Engineer",
+          "Backend Developer",
+          "Frontend Developer",
+          "Golang",
+          "Laravel",
+          "Nuxt 3",
+          "Vue.js",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "Supabase",
+          "IT Support",
+          "Hardware Troubleshooting",
+          "Printer Troubleshooting",
+          "Full-Stack Development"
+        ],
+        "sameAs": [
+          "https://github.com/Mighty-SEA"
+        ]
+      }
+    }
+  ]
 };
 ---
 
