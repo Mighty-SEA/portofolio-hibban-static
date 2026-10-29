@@ -387,6 +387,7 @@ export function ProjectsSection() {
                     href={proj.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Lihat repositori GitHub untuk ${proj.title.en}`}
                     onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center gap-1 px-2 py-1 bg-white border-2 border-black rounded-base text-[11px] font-heading font-black hover:bg-yellow-200 transition-all shadow-[1px_1px_0px_#000]"
                   >
@@ -398,6 +399,7 @@ export function ProjectsSection() {
                     href={proj.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Buka live demo aplikasi ${proj.title.en}`}
                     onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center gap-1 px-2 py-1 bg-sky-200 border-2 border-black rounded-base text-[11px] font-heading font-black hover:bg-sky-300 transition-all shadow-[1px_1px_0px_#000]"
                   >
@@ -405,7 +407,12 @@ export function ProjectsSection() {
                   </a>
                 )}
               </div>
-              <Button variant="default" size="xs" className="font-heading font-black">
+              <Button
+                variant="default"
+                size="xs"
+                className="font-heading font-black"
+                aria-label={`Pelajari arsitektur dan studi kasus ${proj.title.en}`}
+              >
                 <span data-lang-id>Studi Kasus →</span>
                 <span data-lang-en>Case Study →</span>
               </Button>
@@ -581,7 +588,12 @@ export function ProjectsSection() {
             <div className="flex flex-wrap items-center justify-between gap-3 border-t-2 border-border pt-4">
               <div className="flex items-center gap-2">
                 {selectedProject.github && (
-                  <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Buka repositori GitHub ${selectedProject.title.en}`}
+                  >
                     <Button variant="default" size="sm" className="font-heading font-bold uppercase text-xs border-2 border-black shadow-neo-sm">
                       <span data-lang-id>Kode Sumber / GitHub ↗</span>
                       <span data-lang-en>GitHub Repository ↗</span>
@@ -589,7 +601,12 @@ export function ProjectsSection() {
                   </a>
                 )}
                 {selectedProject.link && (
-                  <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Buka demo online ${selectedProject.title.en}`}
+                  >
                     <Button variant="neutral" size="sm" className="font-heading font-bold uppercase text-xs border-2 border-black shadow-neo-sm">
                       Live Demo ↗
                     </Button>
