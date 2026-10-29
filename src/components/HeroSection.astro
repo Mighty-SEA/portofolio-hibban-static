@@ -1,0 +1,87 @@
+---
+import { PuzzleAvatar } from "@/components/PuzzleAvatar";
+---
+
+<section class="py-8 sm:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Left Column: Copy & CTAs -->
+  <div class="lg:col-span-7 flex flex-col gap-6">
+    <!-- Top Pill Badge -->
+    <div class="w-fit inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-white border-2 border-black rounded-full font-black text-[10px] sm:text-xs uppercase shadow-neo-sm transform -rotate-1">
+      <span class="inline-block size-2 sm:size-2.5 rounded-full bg-neo-secondary animate-ping"></span>
+      <span class="font-display font-black text-[10px] sm:text-xs uppercase tracking-wider text-black">
+        FULL-STACK DEVELOPER & IT SUPPORT • BANDUNG, ID
+      </span>
+    </div>
+
+    <!-- Screen Reader H1 for SEO -->
+    <h1 class="sr-only">
+      Hibban Habiburrahman — Full-Stack Developer & IT Support Bandung
+    </h1>
+
+    <!-- Visual Headline matching exact design -->
+    <div class="font-display font-black text-4xl sm:text-6xl lg:text-7xl leading-none uppercase tracking-tight text-black flex flex-col gap-1 sm:gap-2 select-none">
+      <!-- English Headline -->
+      <div data-lang-en class="flex flex-col gap-1 sm:gap-2">
+        <span class="block">BUILDING CLEAN</span>
+        <div>
+          <span class="bg-neo-primary px-3 sm:px-4 py-0.5 sm:py-1 inline-block border-3 border-black shadow-neo transform rotate-1 text-3xl sm:text-5xl lg:text-6xl text-black">
+            WEB APPS
+          </span>
+        </div>
+        <span class="block text-3xl sm:text-5xl lg:text-6xl mt-1">WITH REAL-WORLD</span>
+        <span class="block text-3xl sm:text-5xl lg:text-6xl">TROUBLESHOOTING ROOTS.</span>
+      </div>
+
+      <!-- Indonesian Headline -->
+      <div data-lang-id class="flex flex-col gap-1 sm:gap-2">
+        <span class="block">MEMBANGUN APLIKASI</span>
+        <div>
+          <span class="bg-neo-primary px-3 sm:px-4 py-0.5 sm:py-1 inline-block border-3 border-black shadow-neo transform rotate-1 text-3xl sm:text-5xl lg:text-6xl text-black">
+            WEB BERSIH
+          </span>
+        </div>
+        <span class="block text-3xl sm:text-5xl lg:text-6xl mt-1">DENGAN TROUBLESHOOTING</span>
+        <span class="block text-3xl sm:text-5xl lg:text-6xl">DUNIA NYATA.</span>
+      </div>
+    </div>
+
+    <!-- Description Paragraph -->
+    <p data-lang-en class="font-sans text-base sm:text-lg text-gray-800 font-medium max-w-xl leading-relaxed">
+      Hi, I'm Hibban! A Full-Stack Developer based in Bandung. I build web and desktop apps using Golang, Laravel, and Nuxt 3—backed by hands-on experience as an IT support technician fixing hardware and printers. I enjoy turning complex problems into working software.
+    </p>
+    <p data-lang-id class="font-sans text-base sm:text-lg text-gray-800 font-medium max-w-xl leading-relaxed">
+      Hi, saya Hibban! Seorang Full-Stack Developer yang berbasis di Bandung. Saya membangun aplikasi web dan desktop menggunakan Golang, Laravel, dan Nuxt 3—didukung oleh pengalaman langsung sebagai teknisi IT support yang memperbaiki hardware dan printer. Saya senang mengubah masalah rumit menjadi perangkat lunak yang berfungsi.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+      <a
+        href="#projects"
+        class="px-5 py-3 sm:px-6 sm:py-3.5 bg-neo-primary text-black border-3 border-black rounded-xl font-display font-black text-xs sm:text-sm uppercase shadow-neo hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none active:translate-x-1 active:translate-y-1 transition-all inline-block select-none"
+      >
+        <span data-lang-en>VIEW MY WORK</span>
+        <span data-lang-id>LIHAT KARYA SAYA</span>
+      </a>
+      <a
+        href="https://wa.me/6289516176720"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-5 py-3 sm:px-6 sm:py-3.5 bg-neo-accent text-black border-3 border-black rounded-xl font-display font-black text-xs sm:text-sm uppercase shadow-neo hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none active:translate-x-1 active:translate-y-1 transition-all inline-block select-none"
+      >
+        CHAT WHATSAPP
+      </a>
+      <a
+        href="#contact"
+        class="px-5 py-3 sm:px-6 sm:py-3.5 bg-white text-black border-3 border-black rounded-xl font-display font-black text-xs sm:text-sm uppercase shadow-neo hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none active:translate-x-1 active:translate-y-1 transition-all inline-block select-none"
+      >
+        <span data-lang-en>HIRE ME</span>
+        <span data-lang-id>HUBUNGI SAYA</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Right Column: Interactive Puzzle Avatar Card -->
+  <div class="lg:col-span-5 flex justify-center">
+    <PuzzleAvatar client:load />
+  </div>
+</section>

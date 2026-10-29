@@ -1,0 +1,138 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = "Hibban Habiburrahman - Full-Stack Developer and IT Support",
+  description = "Portofolio Hibban Habiburrahman, Full-Stack Dev & IT Support di Bandung. Spesialis Golang, Laravel, Nuxt 3, dan troubleshooting sistem.",
+  image = "/foto-profil.webp",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://habiburrahman.web.id").toString(),
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") || "https://habiburrahman.web.id";
+const fullImageUrl = new URL(image, siteUrl).toString();
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Hibban Habiburrahman",
+    "alternateName": "Hibban",
+    "image": `${siteUrl}/foto-profil.webp`,
+    "jobTitle": "Full-Stack Developer & IT Support",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bandung",
+      "addressRegion": "Jawa Barat",
+      "addressCountry": "ID"
+    },
+    "description": "Full-Stack Developer & IT Support based in Bandung. I build web and desktop apps using Golang, Laravel, and Nuxt 3—backed by hands-on experience as an IT support technician.",
+    "knowsAbout": [
+      "Web Developer",
+      "Web Development",
+      "Full Stack Web Developer",
+      "Software Engineer",
+      "Backend Developer",
+      "Frontend Developer",
+      "Golang",
+      "Laravel",
+      "Nuxt 3",
+      "Vue.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Supabase",
+      "IT Support",
+      "Hardware Troubleshooting",
+      "Printer Troubleshooting",
+      "Full-Stack Development"
+    ],
+    "sameAs": [
+      "https://github.com/Mighty-SEA"
+    ]
+  }
+};
+---
+
+<!doctype html>
+<html lang="id" data-lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Script to prevent flash of wrong language and theme -->
+    <script is:inline>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('portfolio_theme') || 'theme-sunny';
+          document.documentElement.className = savedTheme;
+
+          const savedLang = localStorage.getItem('portfolio_lang');
+          const detectedLang = savedLang || (navigator.language && navigator.language.startsWith('id') ? 'id' : 'en');
+          document.documentElement.setAttribute('data-lang', detectedLang);
+          document.documentElement.setAttribute('lang', detectedLang);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Google Site Verification (GSC) -->
+    <meta name="google-site-verification" content="uRlvr1BUerqfRUDI7p1J9gR285xc-kPG9nZsTLZ4CgY" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="application-name" content="Hibban Portfolio" />
+    <meta name="theme-color" content="#FFD23F" />
+
+    <!-- Mobile App Capabilities -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hibban Portfolio" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImageUrl} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- Fonts: Outfit (Heading), Space Grotesk (Display), Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </head>
+  <body class="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-main selection:text-black">
+    <slot />
+  </body>
+</html>
+

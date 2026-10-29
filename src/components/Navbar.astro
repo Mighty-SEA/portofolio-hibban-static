@@ -1,0 +1,176 @@
+---
+---
+
+<header class="sticky top-0 z-50 bg-white border-b-3 border-black py-2.5 px-3 sm:py-3.5 sm:px-4 md:px-8 select-none">
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
+    <!-- Brand Logo -->
+    <a href="#" class="font-display font-black text-xl md:text-2xl tracking-tighter uppercase inline-flex items-center gap-2 group shrink-0">
+      <span class="size-8 sm:size-9 bg-neo-primary border-2 border-black rounded shadow-neo-sm flex items-center justify-center font-black text-base sm:text-lg transform -rotate-2 group-hover:rotate-0 transition-transform">
+        H
+      </span>
+      <span class="hidden sm:inline font-display font-black tracking-tight text-black">
+        HABIBURRAHMAN
+      </span>
+    </a>
+
+    <!-- Nav Links -->
+    <nav class="hidden md:flex items-center gap-6 font-display font-black text-xs uppercase tracking-wider">
+      <a href="#projects" class="text-black hover:text-neo-secondary transition-colors">
+        <span data-lang-en>Projects</span>
+        <span data-lang-id>Proyek</span>
+      </a>
+      <a href="#experience" class="text-black hover:text-neo-secondary transition-colors">
+        <span data-lang-en>Experience</span>
+        <span data-lang-id>Pengalaman</span>
+      </a>
+      <a href="#contact" class="text-black hover:text-neo-secondary transition-colors">
+        <span data-lang-en>Contact</span>
+        <span data-lang-id>Kontak</span>
+      </a>
+    </nav>
+
+    <!-- Controls & Social -->
+    <div class="flex items-center justify-end gap-1.5 sm:gap-3 shrink-0">
+      <!-- Theme Switcher -->
+      <div class="flex items-center gap-1.5 sm:gap-2 bg-gray-100 px-1.5 py-1 sm:px-2.5 sm:py-1.5 border-2 border-black rounded-lg shadow-neo-sm">
+        <span class="text-[11px] font-black uppercase text-black hidden md:inline">Theme:</span>
+        <div class="flex items-center gap-1 sm:gap-1.5" id="theme-swatches">
+          <button
+            type="button"
+            data-theme="theme-sunny"
+            title="Sunny Day"
+            class="size-4 sm:size-5 rounded-full border-2 border-black bg-[#FFD23F] ring-2 ring-black hover:scale-110 transition-transform cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-theme="theme-mint"
+            title="Neo Mint"
+            class="size-4 sm:size-5 rounded-full border-2 border-black bg-[#38BDF8] hover:scale-110 transition-transform cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-theme="theme-cyber"
+            title="Retro Cyber"
+            class="size-4 sm:size-5 rounded-full border-2 border-black bg-[#E9D5FF] hover:scale-110 transition-transform cursor-pointer"
+          ></button>
+          <button
+            type="button"
+            data-theme="theme-sunset"
+            title="Sunset"
+            class="size-4 sm:size-5 rounded-full border-2 border-black bg-[#FB923C] hover:scale-110 transition-transform cursor-pointer"
+          ></button>
+        </div>
+      </div>
+
+      <!-- Language Switcher Pill -->
+      <div class="flex items-center gap-1 sm:gap-1.5 bg-gray-100 px-1.5 py-1 sm:px-2.5 sm:py-1.5 border-2 border-black rounded-lg shadow-neo-sm">
+        <span class="text-[11px] font-black uppercase text-black hidden md:inline">Lang:</span>
+        <div class="flex gap-0.5 sm:gap-1" id="lang-buttons">
+          <button
+            type="button"
+            data-lang="id"
+            class="px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-[11px] font-black uppercase border-2 border-black rounded bg-white hover:bg-gray-50 transition-all shadow-neo-sm cursor-pointer"
+          >
+            ID
+          </button>
+          <button
+            type="button"
+            data-lang="en"
+            class="px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-[11px] font-black uppercase border-2 border-black rounded bg-neo-secondary text-black transition-all shadow-none translate-x-[1px] translate-y-[1px] cursor-pointer"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+
+      <!-- Social Icons -->
+      <nav class="flex items-center gap-1 sm:gap-2">
+        <a
+          href="https://github.com/Mighty-SEA"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
+          class="size-8 sm:size-9 bg-white border-2 border-black rounded-lg shadow-neo-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center text-black"
+        >
+          <svg class="size-4 sm:size-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
+          class="size-8 sm:size-9 bg-white border-2 border-black rounded-lg shadow-neo-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center text-black"
+        >
+          <svg class="size-4 sm:size-5 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  // Theme switcher client-side script
+  const swatches = document.querySelectorAll('#theme-swatches button');
+  const savedTheme = localStorage.getItem('portfolio_theme') || 'theme-sunny';
+  document.documentElement.className = savedTheme;
+
+  swatches.forEach(btn => {
+    const t = btn.getAttribute('data-theme');
+    if (t === savedTheme) {
+      btn.classList.add('ring-2', 'ring-black', 'scale-110');
+    } else {
+      btn.classList.remove('ring-2', 'ring-black', 'scale-110');
+    }
+
+    btn.addEventListener('click', () => {
+      document.documentElement.className = t;
+      localStorage.setItem('portfolio_theme', t);
+      swatches.forEach(b => b.classList.remove('ring-2', 'ring-black', 'scale-110'));
+      btn.classList.add('ring-2', 'ring-black', 'scale-110');
+    });
+  });
+
+  // Language switcher toggle
+  const langButtons = document.querySelectorAll('#lang-buttons button');
+
+  function updateLangUI(current) {
+    langButtons.forEach(b => {
+      const isSelected = b.getAttribute('data-lang') === current;
+      if (isSelected) {
+        b.classList.add('bg-neo-secondary', 'translate-x-[1px]', 'translate-y-[1px]', 'shadow-none');
+        b.classList.remove('bg-white', 'shadow-neo-sm');
+      } else {
+        b.classList.remove('bg-neo-secondary', 'translate-x-[1px]', 'translate-y-[1px]', 'shadow-none');
+        b.classList.add('bg-white', 'shadow-neo-sm');
+      }
+    });
+  }
+
+  function applyLanguage(selected) {
+    document.documentElement.setAttribute('data-lang', selected);
+    document.documentElement.setAttribute('lang', selected);
+    try {
+      localStorage.setItem('portfolio_lang', selected);
+    } catch (e) {}
+    updateLangUI(selected);
+    window.dispatchEvent(new CustomEvent('lang-change', { detail: { lang: selected } }));
+  }
+
+  // Initial sync from documentElement data-lang
+  const initialLang = document.documentElement.getAttribute('data-lang') || 'id';
+  updateLangUI(initialLang);
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selected = btn.getAttribute('data-lang');
+      if (selected) {
+        applyLanguage(selected);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,111 @@
+---
+import { Badge } from "@/components/ui/badge";
+
+const experiences = [
+  {
+    role: {
+      en: "Freelance Web Developer",
+      id: "Developer Web Lepas (Freelance)",
+    },
+    company: "PT. Digital Rayafokus",
+    period: {
+      en: "2025 - Present",
+      id: "2025 - Sekarang",
+    },
+    desc: {
+      en: "Collaborating as a contract developer to design and build high-performance client web applications, including Veterinary Clinic platforms, dynamic Landing Pages, and integrated POS systems.",
+      id: "Berkolaborasi sebagai pengembang kontrak untuk merancang dan membangun aplikasi web klien berkinerja tinggi, termasuk platform Klinik Hewan, Landing Page dinamis, dan sistem POS terintegrasi.",
+    },
+    type: "Work",
+  },
+  {
+    role: {
+      en: "IT Support & Technician",
+      id: "Dukungan TI & Teknisi",
+    },
+    company: "CN Computer / CV Pillar Abadi",
+    period: {
+      en: "1 Year",
+      id: "1 Tahun",
+    },
+    desc: {
+      en: "Specialized in maintenance and repair of printers and computer systems. Frequently deployed onsite to perform network installations, cabling, configuration, and hardware troubleshooting.",
+      id: "Spesialisasi dalam perawatan dan perbaikan printer serta sistem komputer. Ditugaskan di lokasi klien untuk melakukan instalasi jaringan, pengkabelan LAN, konfigurasi OS/server, dan troubleshooting hardware.",
+    },
+    type: "Work",
+  },
+  {
+    role: {
+      en: "S1 Informatics Engineering Graduate",
+      id: "Sarjana Teknik Informatika (S1)",
+    },
+    company: "STT Pratama Adi",
+    period: {
+      en: "Class of 2026",
+      id: "Lulusan 2026",
+    },
+    desc: {
+      en: "Completed Bachelor's degree in Informatics Engineering. Developed a thesis project titled 'PriceBoost'—an application utilizing the XGBoost algorithm to generate selling price recommendations for Tokopedia products cross-validated with IBM SPSS.",
+      id: "Menyelesaikan gelar Sarjana Teknik Informatika dengan riset tugas akhir berjudul 'PriceBoost'—aplikasi machine learning XGBoost untuk rekomendasi harga jual produk marketplace Tokopedia yang tervalidasi silang dengan IBM SPSS.",
+    },
+    type: "Education",
+  },
+];
+---
+
+<section id="experience" class="py-12 flex flex-col gap-8">
+  <!-- Section Title -->
+  <div class="flex flex-col gap-2">
+    <div class="inline-flex items-center gap-2">
+      <span class="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
+        <span data-lang-en>History</span>
+        <span data-lang-id>Riwayat Pengalaman</span>
+      </span>
+    </div>
+    <p data-lang-en class="font-sans text-base text-black/70 max-w-2xl font-medium">
+      My journey through professional work, technical support, and academic milestones.
+    </p>
+    <p data-lang-id class="font-sans text-base text-black/70 max-w-2xl font-medium">
+      Perjalanan profesional saya dalam pengembangan perangkat lunak, dukungan teknis IT, serta pencapaian akademis.
+    </p>
+  </div>
+
+  <!-- Timeline List -->
+  <div class="relative pl-6 sm:pl-8 border-l-3 border-border flex flex-col gap-8 ml-3">
+    {
+      experiences.map((exp, index) => (
+        <div class="relative group">
+          {/* Dot Indicator */}
+          <div class="absolute -left-[37px] sm:-left-[45px] top-6 size-6 rounded-full bg-main border-2 border-border shadow-[2px_2px_0px_#000] flex items-center justify-center font-black text-xs">
+            {index + 1}
+          </div>
+
+          {/* Card */}
+          <div class="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all flex flex-col gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-border/20 pb-3">
+              <div>
+                <h3 class="font-heading font-black text-lg sm:text-xl uppercase text-foreground">
+                  <span data-lang-en>{exp.role.en}</span>
+                  <span data-lang-id>{exp.role.id}</span>
+                </h3>
+                <span class="font-display font-bold text-xs sm:text-sm text-foreground bg-main px-2 py-0.5 border border-border rounded-sm shadow-[1px_1px_0px_#000] inline-block mt-1">
+                  {exp.company}
+                </span>
+              </div>
+              <Badge variant="neutral" className="w-fit font-mono text-xs font-bold">
+                <span data-lang-en>{exp.period.en}</span>
+                <span data-lang-id>{exp.period.id}</span>
+              </Badge>
+            </div>
+
+            <p class="font-sans text-sm sm:text-base text-black/80 leading-relaxed">
+              <span data-lang-en>{exp.desc.en}</span>
+              <span data-lang-id>{exp.desc.id}</span>
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+

@@ -1,0 +1,46 @@
+---
+const skills = [
+  "Golang",
+  "Laravel",
+  "Astro",
+  "Vue.js",
+  "Nuxt 3",
+  "React",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "SQLite",
+  "REST API",
+  "Python (XGBoost)",
+  "Docker",
+  "Git",
+  "Hardware & Network Support",
+];
+---
+
+<div class="relative w-full overflow-hidden bg-main border-y-2 border-border py-4 shadow-shadow select-none my-6 group">
+  <div class="flex overflow-hidden">
+    <!-- Track 1 -->
+    <div class="flex shrink-0 animate-marquee items-center gap-8 pr-8 group-hover:[animation-play-state:paused]">
+      {
+        skills.map((skill) => (
+          <div class="flex items-center gap-6 text-foreground font-display font-black text-lg sm:text-2xl uppercase tracking-wider whitespace-nowrap">
+            <span>{skill}</span>
+            <span class="inline-block size-3.5 bg-black border border-black rotate-45 shrink-0" />
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Track 2 (Duplicate for 100% seamless infinite loop) -->
+    <div class="flex shrink-0 animate-marquee items-center gap-8 pr-8 group-hover:[animation-play-state:paused]" aria-hidden="true">
+      {
+        skills.map((skill) => (
+          <div class="flex items-center gap-6 text-foreground font-display font-black text-lg sm:text-2xl uppercase tracking-wider whitespace-nowrap">
+            <span>{skill}</span>
+            <span class="inline-block size-3.5 bg-black border border-black rotate-45 shrink-0" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

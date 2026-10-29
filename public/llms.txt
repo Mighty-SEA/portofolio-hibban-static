@@ -1,0 +1,54 @@
+# Hibban Habiburrahman
+
+Hibban Habiburrahman is a Full-Stack Developer & IT Support Specialist based in Bandung, Indonesia. He builds clean, robust web and desktop applications backed by hands-on real-world troubleshooting roots from his background in IT support.
+
+## Profile Summary
+- **Role**: Full-Stack Developer & IT Support
+- **Location**: Bandung, West Java, Indonesia (ID)
+- **Website**: https://habiburrahman.web.id/
+- **GitHub**: https://github.com/Mighty-SEA
+- **Status**: Open for Freelance Contracts, Remote Projects, & Full-Time Opportunities
+
+---
+
+## Core Technical Stack
+
+### Software Development
+- **Backend**: Golang (Fiber, Microservices), PHP (Laravel, Filament)
+- **Frontend**: Vue.js, Nuxt 3, Vite, Tailwind CSS, TypeScript
+- **Database / Tools**: PostgreSQL, SQLite, MySQL, Supabase, Docker, Git
+- **Machine Learning & Scraping**: Python, Pandas, Scikit-learn, XGBoost, BeautifulSoup (Web Scraping)
+
+### IT Support & Troubleshooting
+- Hardware diagnostic & repairs
+- Printer troubleshooting, configuration, and thermal printing protocols (Web Serial API)
+- Local network setup, operating system installation, and server management
+
+---
+
+## Key Projects
+
+### 1. PriceBoost (Thesis / Tugas Akhir)
+An AI-powered price recommendation platform for Tokopedia marketplace products.
+- **Backend & ML**: Go API backend, Python machine learning engine with XGBoost Regression, PostgreSQL.
+- **Frontend**: Vue 3 (Vite).
+- **Features**: Automated web scraping of Tokopedia product metrics, and exportable datasets validated with IBM SPSS (Pearson Correlation & Multiple Linear Regression).
+- **GitHub**: https://github.com/Mighty-SEA/PriceBoost
+
+### 2. 4Paws — Veterinary Clinic & POS System
+Sistem Manajemen Klinik Hewan & Point of Sale for "4 Paws Pet Care".
+- **Architecture**: Dual deployment via Go Fiber (Cloud Web App) and Wails (Native Desktop GUI `.exe` for offline clinic use).
+- **Features**: Electronic Medical Records (EMR), Vaccination History, real-time Veterinarian Queue, Inpatient/Hotel management, Inventory Audit Trail, and Business Intelligence reports.
+- **Demo**: https://demo-petclinic.habiburrahman.web.id/
+
+### 3. WAGate (Meow) — WhatsApp Gateway API
+A developer-first WhatsApp gateway and notification infrastructure.
+- **Tech**: Golang, Vue, shadcn/ui, Supabase, REST API, Webhooks.
+- **Features**: Fast REST API integration for transactional notifications & OTP, real-time webhooks, multi-device QR session handling, and API usage dashboard.
+- **Website**: https://wagate.habiburrahman.web.id/
+
+### 4. Catatin — Chat to Structured Data Automation
+An automated WhatsApp chat management and ledger platform.
+- **Tech**: Golang, Vue, shadcn/ui, Supabase, WhatsApp Automation.
+- **Features**: Automated synchronization of incoming chat messages, payment proofs, and contacts into a centralized database with multi-agent management.
+- **Website**: https://catatin.habiburrahman.web.id/
