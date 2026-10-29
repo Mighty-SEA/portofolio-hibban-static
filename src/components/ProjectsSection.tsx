@@ -208,7 +208,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-12 flex flex-col gap-8">
       {/* Section Header */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 reveal">
         <div className="inline-flex items-center gap-2">
           <span className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
             <span data-lang-id>Proyek Pilihan</span>
@@ -228,7 +228,7 @@ export function ProjectsSection() {
         {projects.map((proj) => (
           <Card
             key={proj.id}
-            className="flex flex-col justify-between hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all cursor-pointer group"
+            className="flex flex-col justify-between hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all cursor-pointer group reveal"
             onClick={() => openModal(proj)}
           >
             <CardHeader>

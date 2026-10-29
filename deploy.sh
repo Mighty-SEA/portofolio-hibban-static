@@ -92,3 +92,4 @@ EOF
 rm -f deploy.tar.gz
 
 echo -e "\033[0;32m🎉 Sukses! Portofolio static terbaru telah aktif di server.\033[0m"
+

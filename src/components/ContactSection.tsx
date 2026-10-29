@@ -93,7 +93,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-12 flex flex-col gap-8">
       {/* Title */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 reveal">
         <div className="inline-flex items-center gap-2">
           <span className="font-heading font-black text-2xl sm:text-4xl uppercase px-4 py-1 bg-main border-2 border-border rounded-base shadow-shadow inline-block">
             <span data-lang-id>Mari Berdiskusi!</span>
@@ -110,7 +110,7 @@ export function ContactSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Left Column: Direct Coordinates */}
-        <div className="lg:col-span-5 flex">
+        <div className="lg:col-span-5 flex reveal">
           <Card className="w-full flex flex-col justify-between">
             <CardHeader>
               <Badge variant="neutral" className="w-fit font-mono text-xs uppercase mb-1">
@@ -209,7 +209,7 @@ export function ContactSection() {
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="lg:col-span-7 flex">
+        <div className="lg:col-span-7 flex reveal">
           <Card className="w-full">
             <CardHeader>
               <Badge variant="neutral" className="w-fit font-mono text-xs uppercase mb-1">

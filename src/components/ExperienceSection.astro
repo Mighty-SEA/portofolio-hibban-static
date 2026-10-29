@@ -50,7 +50,7 @@ const experiences = [
 
 <section id="experience" class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
   <!-- Left Column: Title & Subtitle (Sticky on Desktop) -->
-  <div class="lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-24">
+  <div class="lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-24 reveal">
     <div>
       <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl uppercase text-black inline-block bg-neo-secondary border-3 border-black px-5 sm:px-6 py-2 shadow-neo transform -rotate-1 select-none">
         <span data-lang-en>HISTORY</span>
@@ -79,7 +79,7 @@ const experiences = [
 
     {
       experiences.map((exp, index) => (
-        <div class="relative group" data-timeline-item={index}>
+        <div class="relative group reveal" data-timeline-item={index}>
           {/* Animated Timeline Dot Indicator */}
           <div
             class="timeline-dot absolute -left-[32px] sm:-left-[40px] top-6 size-5 rounded-full border-3 border-black bg-white z-20 shadow-[1px_1px_0px_#000] transition-colors duration-200"

@@ -133,6 +133,47 @@ const personSchema = {
   </head>
   <body class="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-main selection:text-black">
     <slot />
+
+    <!-- Scroll Reveal Intersection Observer (Muncul saat discroll, menghilang saat dilewati) -->
+    <script is:inline>
+      function initScrollReveal() {
+        if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            } else {
+              // Menghilang saat dilewati / keluar dari viewport
+              entry.target.classList.remove('active');
+            }
+          });
+        }, {
+          threshold: 0.05,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        function observeElements() {
+          document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+          });
+        }
+
+        observeElements();
+
+        // Observe elements hydrated dynamically by React islands
+        const mo = new MutationObserver(() => {
+          observeElements();
+        });
+        mo.observe(document.body, { childList: true, subtree: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollReveal);
+      } else {
+        initScrollReveal();
+      }
+    </script>
   </body>
 </html>
 
