@@ -721,64 +721,64 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Image Controls Bar */}
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono font-bold">
-                  <div className="flex items-center gap-1.5">
-                    {selectedProject.screenshots.length > 1 && (
-                      <>
-                        <button
-                          type="button"
-                          onClick={prevImage}
-                          className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
-                        >
-                          Prev
-                        </button>
-                        <span className="px-2 py-1 text-black/80">
-                          {activeImageIndex + 1} / {selectedProject.screenshots.length}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={nextImage}
-                          className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
-                        >
-                          Next
-                        </button>
-                      </>
-                    )}
-                  </div>
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <button
-                      type="button"
-                      onClick={() => applyZoom(zoomLevel - 0.5)}
-                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
-                      aria-label="Perkecil gambar"
-                    >
-                      -
-                    </button>
-                    <span className="px-2 py-1 bg-main border-2 border-black rounded-sm min-w-[52px] text-center">
-                      {Math.round(zoomLevel * 100)}%
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => applyZoom(zoomLevel + 0.5)}
-                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
-                      aria-label="Perbesar gambar"
-                    >
-                      +
-                    </button>
-                    <button
-                      type="button"
-                      onClick={resetZoom}
-                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
-                    >
-                      Reset
-                    </button>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs font-mono font-bold">
+                  {selectedProject.screenshots.length > 1 && (
+                    <div className="flex items-center justify-between sm:justify-start gap-1.5">
+                      <button
+                        type="button"
+                        onClick={prevImage}
+                        className="px-3 py-1.5 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                      >
+                        Prev
+                      </button>
+                      <span className="px-2.5 py-1 text-black/80 text-center">
+                        {activeImageIndex + 1} / {selectedProject.screenshots.length}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={nextImage}
+                        className="px-3 py-1.5 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between sm:justify-end gap-1.5">
+                    <div className="flex items-center gap-1">
+                      <button
+                        type="button"
+                        onClick={() => applyZoom(zoomLevel - 0.5)}
+                        className="px-3 py-1.5 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                        aria-label="Perkecil gambar"
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        onClick={resetZoom}
+                        title="Reset zoom ke 100%"
+                        className="px-2.5 py-1.5 bg-main border-2 border-black rounded-sm min-w-[54px] text-center hover:bg-yellow-300 cursor-pointer"
+                      >
+                        {Math.round(zoomLevel * 100)}%
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => applyZoom(zoomLevel + 0.5)}
+                        className="px-3 py-1.5 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                        aria-label="Perbesar gambar"
+                      >
+                        +
+                      </button>
+                    </div>
+
                     <button
                       type="button"
                       onClick={() => setIsExpandedImage((prev) => !prev)}
-                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                      className="px-3 py-1.5 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
                     >
-                      <span data-lang-id>{isExpandedImage ? "Ukuran Normal" : "Perbesar Frame"}</span>
-                      <span data-lang-en>{isExpandedImage ? "Normal Size" : "Expand Frame"}</span>
+                      <span data-lang-id>{isExpandedImage ? "Normal" : "Tinggi"}</span>
+                      <span data-lang-en>{isExpandedImage ? "Normal" : "Expand"}</span>
                     </button>
                   </div>
                 </div>
