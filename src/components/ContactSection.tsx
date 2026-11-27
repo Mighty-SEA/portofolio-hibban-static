@@ -20,6 +20,7 @@ export function ContactSection() {
   const [formSending, setFormSending] = React.useState(false);
   const [formSubmitted, setFormSubmitted] = React.useState(false);
   const [formError, setFormError] = React.useState(false);
+  const [botCheck, setBotCheck] = React.useState(false);
 
   const copyToClipboard = (text: string, type: "email" | "wa") => {
     if (navigator?.clipboard) {
@@ -36,7 +37,11 @@ export function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formName.trim() || !formEmail.trim() || !formMessage.trim()) return;
+    if (botCheck) return;
+    if (!formName.trim() || !formEmail.trim() || !formMessage.trim()) {
+      setFormError(true);
+      return;
+    }
 
     setFormSending(true);
     setFormError(false);
@@ -50,41 +55,26 @@ export function ContactSection() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "web3forms_portfolio_key",
+          access_key: "37fbf34f-0016-4522-91b9-00840eb9ec85",
           name: formName.trim(),
           email: formEmail.trim(),
           message: formMessage.trim(),
-          subject: `Portfolio Message from ${formName.trim()}`,
+          subject: `Pesan Portofolio dari ${formName.trim()}`,
+          botcheck: botCheck,
         }),
       });
 
       const data = await res.json();
-      if (data.success) {
+      if (res.ok && data.success) {
         setFormSubmitted(true);
         setFormName("");
         setFormEmail("");
         setFormMessage("");
       } else {
-        // Fallback: open WhatsApp
-        window.open(
-          `https://wa.me/6289516176720?text=${encodeURIComponent(
-            `Halo Hibban, saya ${formName} (${formEmail}).\n\nPesan:\n${formMessage}`
-          )}`,
-          "_blank"
-        );
-        setFormSubmitted(true);
+        setFormError(true);
       }
     } catch {
-      // Fallback on network error: mailto
-      window.open(
-        `mailto:Hibban.Habiburrahman.SEA@gmail.com?subject=Kontak%20Portofolio%20dari%20${encodeURIComponent(
-          formName
-        )}&body=${encodeURIComponent(
-          `Nama: ${formName}\nEmail: ${formEmail}\n\n${formMessage}`
-        )}`,
-        "_blank"
-      );
-      setFormSubmitted(true);
+      setFormError(true);
     } finally {
       setFormSending(false);
     }
@@ -130,22 +120,22 @@ export function ContactSection() {
             <CardContent className="flex flex-col gap-4">
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <span className="font-display font-bold text-xs uppercase tracking-wider text-black/60">
+                <span className="font-display font-bold text-xs uppercase tracking-wider text-gray-800">
                   Email
                 </span>
                 <button
                   type="button"
-                  onClick={() => copyToClipboard("Hibban.Habiburrahman.SEA@gmail.com", "email")}
+                  onClick={() => copyToClipboard("hibban.habiburrahman.sea@gmail.com", "email")}
                   className="w-full flex items-center justify-between gap-2 p-3 bg-secondary-background border-2 border-border rounded-base shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all text-left"
                 >
                   <span className="font-mono text-xs sm:text-sm font-bold truncate">
                     {copiedEmail ? (
                       <>
-                        <span data-lang-id>✓ Tersalin ke Clipboard!</span>
-                        <span data-lang-en>✓ Copied to Clipboard!</span>
+                        <span data-lang-id>Tersalin ke Clipboard</span>
+                        <span data-lang-en>Copied to Clipboard</span>
                       </>
                     ) : (
-                      "Hibban.Habiburrahman.SEA@gmail.com"
+                      "hibban.habiburrahman.sea@gmail.com"
                     )}
                   </span>
                   <span className="text-xs uppercase font-bold px-2 py-0.5 bg-main border border-border rounded-sm">
@@ -163,7 +153,7 @@ export function ContactSection() {
 
               {/* WhatsApp */}
               <div className="flex flex-col gap-1.5">
-                <span className="font-display font-bold text-xs uppercase tracking-wider text-black/60">
+                <span className="font-display font-bold text-xs uppercase tracking-wider text-gray-800">
                   WhatsApp
                 </span>
                 <button
@@ -174,8 +164,8 @@ export function ContactSection() {
                   <span className="font-mono text-xs sm:text-sm font-bold">
                     {copiedWa ? (
                       <>
-                        <span data-lang-id>✓ Tersalin ke Clipboard!</span>
-                        <span data-lang-en>✓ Copied to Clipboard!</span>
+                        <span data-lang-id>Tersalin ke Clipboard</span>
+                        <span data-lang-en>Copied to Clipboard</span>
                       </>
                     ) : (
                       "+62 895-1617-6720"
@@ -194,14 +184,14 @@ export function ContactSection() {
                 </button>
               </div>
 
-              <div className="mt-4 pt-4 border-t-2 border-border/20 flex items-center justify-between text-xs font-mono font-bold text-black/70">
+              <div className="mt-4 pt-4 border-t-2 border-border/20 flex items-center justify-between text-xs font-mono font-bold text-gray-800">
                 <span>
-                  <span data-lang-id>📍 Lokasi: Bandung, ID</span>
-                  <span data-lang-en>📍 Location: Bandung, ID</span>
+                  <span data-lang-id>Lokasi: Bandung, ID</span>
+                  <span data-lang-en>Location: Bandung, ID</span>
                 </span>
                 <span className="text-green-700">
-                  <span data-lang-id>● Siap Bekerja</span>
-                  <span data-lang-en>● Open for Work</span>
+                  <span data-lang-id>Siap Bekerja</span>
+                  <span data-lang-en>Open for Work</span>
                 </span>
               </div>
             </CardContent>
@@ -228,6 +218,16 @@ export function ContactSection() {
 
             <CardContent>
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  checked={botCheck}
+                  onChange={(e) => setBotCheck(e.target.checked)}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="name" className="font-display font-bold text-xs uppercase">
@@ -302,8 +302,8 @@ export function ContactSection() {
                     disabled={formSending}
                     className="font-heading font-black uppercase text-xs"
                   >
-                    <span data-lang-id>{formSending ? "Mengirim..." : "Kirim Pesan 🚀"}</span>
-                    <span data-lang-en>{formSending ? "Sending..." : "Send Message 🚀"}</span>
+                    <span data-lang-id>{formSending ? "Mengirim..." : "Kirim Pesan"}</span>
+                    <span data-lang-en>{formSending ? "Sending..." : "Send Message"}</span>
                   </Button>
                 </div>
               </form>

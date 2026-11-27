@@ -1,16 +1,15 @@
 # Hibban Habiburrahman
 
-Hibban Habiburrahman is a Full-Stack Developer & IT Support Specialist based in Bandung, Indonesia. He builds clean, robust web and desktop applications backed by hands-on real-world troubleshooting roots from his background in IT support.
+> Full-Stack Developer & IT Support Specialist based in Bandung, Indonesia. Builds web and desktop applications with Golang, Laravel, Vue.js, and PostgreSQL, backed by hands-on hardware and network troubleshooting experience.
 
 ## Profile Summary
 - **Role**: Full-Stack Developer & IT Support
 - **Location**: Bandung, West Java, Indonesia (ID)
-- **Website**: https://habiburrahman.web.id/
-- **GitHub**: https://github.com/Mighty-SEA
-- **LinkedIn**: https://www.linkedin.com/in/hibban-habiburrahman-a47608429/
+- **Email**: hibban.habiburrahman.sea@gmail.com
+- **Website**: [habiburrahman.web.id](https://habiburrahman.web.id/)
+- **GitHub**: [github.com/Mighty-SEA](https://github.com/Mighty-SEA)
+- **LinkedIn**: [linkedin.com/in/hibban-habiburrahman](https://www.linkedin.com/in/hibban-habiburrahman-a47608429/)
 - **Status**: Open for Freelance Contracts, Remote Projects, & Full-Time Opportunities
-
----
 
 ## Core Technical Stack
 
@@ -25,31 +24,41 @@ Hibban Habiburrahman is a Full-Stack Developer & IT Support Specialist based in 
 - Printer troubleshooting, configuration, and thermal printing protocols (Web Serial API)
 - Local network setup, operating system installation, and server management
 
----
-
 ## Key Projects
 
 ### 1. PriceBoost (Thesis / Tugas Akhir)
-An AI-powered price recommendation platform for Tokopedia marketplace products.
+A price recommendation platform for Tokopedia marketplace products using XGBoost machine learning.
 - **Backend & ML**: Go API backend, Python machine learning engine with XGBoost Regression, PostgreSQL.
 - **Frontend**: Vue 3 (Vite).
 - **Features**: Automated web scraping of Tokopedia product metrics, and exportable datasets validated with IBM SPSS (Pearson Correlation & Multiple Linear Regression).
-- **GitHub**: https://github.com/Mighty-SEA/PriceBoost
+- **GitHub**: [Mighty-SEA/PriceBoost](https://github.com/Mighty-SEA/PriceBoost)
 
 ### 2. 4Paws — Veterinary Clinic & POS System
-Sistem Manajemen Klinik Hewan & Point of Sale for "4 Paws Pet Care".
+Veterinary Clinic & Point of Sale management system for "4 Paws Pet Care".
 - **Architecture**: Dual deployment via Go Fiber (Cloud Web App) and Wails (Native Desktop GUI `.exe` for offline clinic use).
-- **Features**: Electronic Medical Records (EMR), Vaccination History, real-time Veterinarian Queue, Inpatient/Hotel management, Inventory Audit Trail, and Business Intelligence reports.
-- **Demo**: https://demo-petclinic.habiburrahman.web.id/
+- **Features**: Electronic Medical Records (EMR), Vaccination History, Veterinarian Queue, Inpatient/Hotel management, Inventory log, and Operational Reports.
+- **Demo**: [demo-petclinic.habiburrahman.web.id](https://demo-petclinic.habiburrahman.web.id/)
 
 ### 3. WAGate (Meow) — WhatsApp Gateway API
 A developer-first WhatsApp gateway and notification infrastructure.
 - **Tech**: Golang, Vue, shadcn/ui, Supabase, REST API, Webhooks.
-- **Features**: Fast REST API integration for transactional notifications & OTP, real-time webhooks, multi-device QR session handling, and API usage dashboard.
-- **Website**: https://wagate.habiburrahman.web.id/
+- **Features**: REST API integration for transactional notifications & OTP, webhooks, multi-device QR session handling, and API usage dashboard.
+- **Website**: [wagate.habiburrahman.web.id](https://wagate.habiburrahman.web.id/)
 
 ### 4. Catatin — Chat to Structured Data Automation
 An automated WhatsApp chat management and ledger platform.
 - **Tech**: Golang, Vue, shadcn/ui, Supabase, WhatsApp Automation.
 - **Features**: Automated synchronization of incoming chat messages, payment proofs, and contacts into a centralized database with multi-agent management.
-- **Website**: https://catatin.habiburrahman.web.id/
+- **Website**: [catatin.habiburrahman.web.id](https://catatin.habiburrahman.web.id/)
+
+### 5. Vetrico — Veterinary Clinic SaaS
+Independently designed SaaS clinic management platform aligned with SNI 9184:2023 and SOAP DPJP medical record standards.
+- **Tech**: Golang, Vue.js, PostgreSQL, REST API.
+- **Features**: Lobby queue & TTV screening, SOAP records with 6-digit DPJP PIN lock, pharmacy dispensing, inpatient flowsheet, grooming/pet hotel, and multi-branch POS billing.
+- **Website**: [vetrico.id](https://vetrico.id/)
+
+### 6. OHM Registration — Course & Payment Portal
+Production web portal for Japanese language course registration and student payment tracking.
+- **Tech**: PHP, Laravel, MySQL.
+- **Features**: Student registration, class group and session management, and manual installment payment tracking.
+- **Website**: [daftarkelasohm.com](https://daftarkelasohm.com/)

@@ -52,41 +52,41 @@ const projects: Project[] = [
       id: "AI & Microservice",
     },
     desc: {
-      en: "AI-powered price recommendation platform for Tokopedia products using XGBoost machine learning, Go, Python, Vue 3, and PostgreSQL. Features automated Tokopedia web scraping and cross-validation capabilities with IBM SPSS for academic research rigor.",
-      id: "Platform rekomendasi harga jual bertenaga AI untuk produk Tokopedia menggunakan machine learning XGBoost, Go, Python, Vue 3, dan PostgreSQL. Dilengkapi web scraping Tokopedia otomatis serta validasi silang dengan IBM SPSS untuk riset skripsi.",
+      en: "Price recommendation platform for Tokopedia products using XGBoost machine learning, Go, Python, Vue 3, and PostgreSQL. Includes automated Tokopedia web scraping and cross-validation with IBM SPSS.",
+      id: "Platform rekomendasi harga jual untuk produk Tokopedia menggunakan machine learning XGBoost, Go, Python, Vue 3, dan PostgreSQL. Dilengkapi web scraping Tokopedia otomatis serta validasi silang dengan IBM SPSS.",
     },
     metrics: [
-      "⚡ Go & Python Microservices",
-      "🤖 XGBoost Regression (Scikit-Learn)",
-      "📊 Validated w/ IBM SPSS",
-      "🕷️ Automated Tokopedia Scraping",
+      "Go & Python Microservices",
+      "XGBoost Regression (Scikit-Learn)",
+      "Validated w/ IBM SPSS",
+      "Automated Tokopedia Scraping",
     ],
     caseStudy: {
       problem: {
-        en: "Online merchants often misprice products due to lack of real-time competitor benchmarking, while marketplaces like Tokopedia do not provide public APIs for dynamic competitor price intelligence.",
-        id: "Penjual online kerap kesulitan menentukan harga jual optimal karena ketiadaan data pembanding pasar real-time, serta tidak adanya API publik resmi untuk analisis harga kompetitor.",
+        en: "Online merchants often misprice products due to lack of live competitor benchmarking, while marketplaces like Tokopedia do not provide public APIs for competitor price checks.",
+        id: "Penjual online kerap kesulitan menentukan harga jual karena ketiadaan data pembanding pasar, serta tidak adanya API publik resmi untuk mengecek harga kompetitor.",
       },
       solution: {
-        en: "Engineered a complete data pipeline: headless web scrapers collect live Tokopedia product metrics, ingested by a Go REST API, and passed to a Python machine learning engine running an XGBoost regression model to calculate optimal selling prices.",
-        id: "Membangun data pipeline terintegrasi: scraper otomatis mengumpulkan data produk live Tokopedia, diterima oleh Go REST API, lalu diproses oleh Python ML engine dengan model regresi XGBoost untuk memprediksi harga jual optimal.",
+        en: "Built a data pipeline: headless web scrapers collect live Tokopedia product metrics, ingested by a Go REST API, and passed to a Python engine running an XGBoost regression model to calculate selling prices.",
+        id: "Membangun data pipeline terintegrasi: scraper otomatis mengumpulkan data produk Tokopedia, diterima oleh Go REST API, lalu diproses oleh Python engine dengan model regresi XGBoost untuk menghitung rekomendasi harga jual.",
       },
       decision: {
-        en: "Decoupled microservices architecture: Go for high-concurrency scraping & API routing, paired with Python for Scikit-learn/NumPy computations. Exportable CSV datasets were cross-validated with IBM SPSS (Pearson Correlation & Multiple Linear Regression) ensuring academic rigor.",
-        id: "Menerapkan arsitektur microservices terpisah: Go untuk scraping konkuren cepat & API routing, dipadukan dengan Python untuk komputasi Scikit-learn/NumPy. Dataset diekspor dan divalidasi silang dengan IBM SPSS (Korelasi Pearson & Regresi Linear Berganda) untuk akurasi metodologi ilmiah.",
+        en: "Split the backend into two services: Go for concurrent scraping and API routing, paired with Python for Scikit-learn/NumPy computations. Exported CSV datasets were cross-validated with IBM SPSS (Pearson Correlation and Multiple Linear Regression).",
+        id: "Memisahkan layanan backend: Go untuk scraping konkuren dan API routing, dipadukan dengan Python untuk komputasi Scikit-learn/NumPy. Dataset diekspor dan divalidasi silang dengan IBM SPSS (Korelasi Pearson dan Regresi Linear Berganda).",
       },
     },
     highlights: {
       en: [
-        "Automated real-time web scrapper extracting live product metrics directly from Tokopedia marketplace",
-        "XGBoost Regression Model & ML Engine trained on Tokopedia datasets (Pandas, Scikit-learn, NumPy)",
-        "High-performance Microservice Architecture: Go API backend, Python ML engine, PostgreSQL, & Vue 3 Vite UI",
-        "Academic Research Rigor: Exportable CSV datasets cross-validated with IBM SPSS (Pearson Correlation & R² Multiple Linear Regression)",
+        "Automated web scraper extracting live product metrics from Tokopedia marketplace",
+        "XGBoost Regression model trained on Tokopedia datasets (Pandas, Scikit-learn, NumPy)",
+        "Microservice architecture: Go API backend, Python ML engine, PostgreSQL, and Vue 3 Vite UI",
+        "Exportable CSV datasets cross-validated with IBM SPSS (Pearson Correlation & R² Regression)",
       ],
       id: [
-        "Web scrapper otomatis real-time mengambil metrik produk secara langsung dari marketplace Tokopedia",
-        "Model Regresi XGBoost & ML Engine yang dilatih pada dataset Tokopedia (Pandas, Scikit-learn, NumPy)",
-        "Arsitektur Microservice Tinggi: Backend Go API, Engine Python ML, PostgreSQL, & Frontend Vue 3 Vite",
-        "Ketepatan Metodologi Skripsi: Ekspor dataset CSV yang tervalidasi silang dengan IBM SPSS (Korelasi Pearson & Regresi R²)",
+        "Web scraper otomatis yang mengambil metrik produk langsung dari marketplace Tokopedia",
+        "Model Regresi XGBoost yang dilatih pada dataset Tokopedia (Pandas, Scikit-learn, NumPy)",
+        "Arsitektur microservice: Backend Go API, Engine Python ML, PostgreSQL, dan Frontend Vue 3 Vite",
+        "Ekspor dataset CSV yang divalidasi silang dengan IBM SPSS (Korelasi Pearson & Regresi R²)",
       ],
     },
     tags: ["Go", "Python (XGBoost)", "Vue 3", "PostgreSQL", "Web Scraping", "IBM SPSS"],
@@ -101,8 +101,8 @@ const projects: Project[] = [
   {
     id: "vetclinic",
     title: {
-      en: "4Paws — Veterinary Clinic & POS System",
-      id: "4Paws — Sistem Manajemen Klinik Hewan & POS",
+      en: "4Paws: Veterinary Clinic & POS System",
+      id: "4Paws: Sistem Manajemen Klinik Hewan & POS",
     },
     category: {
       en: "Full-Stack & Desktop App",
@@ -113,39 +113,39 @@ const projects: Project[] = [
       id: "Sistem manajemen klinik hewan dan petshop terintegrasi yang dibuat untuk '4 Paws Pet Care'. Dapat dijalankan sebagai Cloud Web App maupun Aplikasi Desktop GUI (.exe) via Wails untuk penggunaan offline.",
     },
     metrics: [
-      "📦 ~15MB Native Binary (Wails)",
-      "🔄 Offline-First SQLite & Cloud MySQL",
-      "🐾 Full EMR & Queue Lifecycle",
-      "⚡ Go Fiber Backend",
+      "Cloud Web & Desktop (.exe)",
+      "SQLite & MySQL Support",
+      "EMR & Queue Workflow",
+      "Go Fiber + Vue 3",
     ],
     caseStudy: {
       problem: {
-        en: "Veterinary clinics operate in physical clinics where unstable internet can paralyze patient registration, electronic medical records (EMR), and retail checkout counters.",
-        id: "Klinik hewan beroperasi di lingkungan fisik di mana koneksi internet yang tidak stabil dapat melumpuhkan antrean pendaftaran pasien, rekam medis hewan (RME), dan transaksi kasir.",
+        en: "Veterinary clinics operate in physical counters where unstable internet can disrupt patient registration, medical records, and daily cashier transactions.",
+        id: "Klinik hewan beroperasi di meja layanan fisik di mana koneksi internet yang tidak stabil dapat menghambat pendaftaran pasien, pencatatan rekam medis, dan transaksi kasir.",
       },
       solution: {
-        en: "Engineered a dual-deployment application from a single Go + Vue 3 codebase: runs seamlessly as a Cloud Web Application and compiles directly to an offline-capable native Windows executable (.exe) via Wails.",
-        id: "Merancang aplikasi dual-deployment dari basis kode tunggal Go + Vue 3: dapat diakses sebagai Cloud Web App dan dikompilasi langsung menjadi aplikasi desktop native (.exe) dengan dukungan database lokal offline.",
+        en: "Handled end-to-end development from database schema design, Go Fiber backend API, and Vue 3 interface to deployment. Built as a single codebase running both as a web app and a Wails desktop app (.exe) with local SQLite support.",
+        id: "Menangani pengembangan dari perancangan skema database, backend Go Fiber, antarmuka Vue 3, hingga instalasi di klinik. Dibangun dari satu basis kode yang berjalan sebagai web app maupun aplikasi desktop (.exe) via Wails dengan SQLite lokal.",
       },
       decision: {
-        en: "Selected Wails over Electron: Electron bundles Chromium/Node resulting in ~150MB+ installers and 300MB+ RAM usage that burdens clinic cash registers. Wails produces a lean ~15MB binary consuming under 60MB RAM with native OS webview integration.",
-        id: "Memilih Wails dibanding Electron: Electron memakan installer 150MB+ dan RAM 300MB+ yang membebani PC kasir klinik. Wails menghasilkan installer sangat ringan (~15MB) dengan konsumsi RAM di bawah 60MB menggunakan webview native sistem operasi.",
+        en: "Selected Wails over Electron so the desktop build stays lightweight on clinic cashier PCs without bundling a separate Chromium runtime, while keeping the same Go + Vue 3 stack used for the web version.",
+        id: "Memilih Wails dibanding Electron agar aplikasi desktop tetap ringan di PC kasir klinik tanpa membundel runtime Chromium terpisah, sekaligus memakai stack Go + Vue 3 yang sama dengan versi web.",
       },
     },
     highlights: {
       en: [
-        "Dual Deployment Architecture: Cloud Web App (Go Fiber/Vue 3) & Native Desktop App (.exe via Wails)",
-        "Electronic Medical Records (EMR), Vaccination History, & Real-time Veterinarian Queue System",
-        "Inpatient Accommodations, Deposit Tracking, & Integrated Petshop Point of Sale (POS)",
-        "Inventory Audit Trail tracking stock restock, sales, and damaged item adjustments",
-        "Business Intelligence Reports analyzing Handler Performance, Revenue Attribution, & Low Stock Alerts",
+        "End-to-end ownership: database design, Go Fiber API, Vue 3 UI, and staff onboarding at the clinic",
+        "Dual deployment: Cloud Web App and offline-capable Desktop App (.exe via Wails)",
+        "Electronic Medical Records (EMR), vaccination history, and veterinarian queue workflow",
+        "Inpatient tracking, deposit handling, and integrated petshop POS cashier",
+        "Stock movement log and operational reports (revenue, handler performance, and low-stock alerts)",
       ],
       id: [
-        "Arsitektur Dual Deployment: Cloud Web App (Go Fiber/Vue 3) & Desktop GUI (.exe via Wails)",
-        "Rekam Medis Elektronik (RME), Riwayat Vaksinasi, & Sistem Antrean Dokter Real-time",
-        "Manajemen Rawat Inap, Uang Deposit, & Point of Sale (POS) Petshop Terpadu",
-        "Audit Trail Inventori melacak restock barang, penjualan, dan penyesuaian stok rusak",
-        "Laporan Business Intelligence menganalisis Kinerja Staf/Dokter, Revenue, & Peringatan Stok Kritis",
+        "Ditangani menyeluruh: desain database, API Go Fiber, UI Vue 3, hingga pendampingan staf klinik",
+        "Dual deployment: Cloud Web App dan aplikasi desktop offline (.exe via Wails)",
+        "Rekam Medis Elektronik (RME), riwayat vaksinasi, dan alur antrean dokter",
+        "Manajemen rawat inap, pencatatan deposit, dan kasir Point of Sale (POS) petshop",
+        "Log mutasi stok dan laporan operasional (omzet, kinerja handler, serta pengingat stok menipis)",
       ],
     },
     tags: ["Go (Fiber)", "Vue 3", "TypeScript", "Wails (.exe)", "MySQL/SQLite", "Docker"],
@@ -161,8 +161,8 @@ const projects: Project[] = [
   {
     id: "wagate",
     title: {
-      en: "WAGate (Meow) — WhatsApp Gateway API",
-      id: "WAGate (Meow) — WhatsApp Gateway API",
+      en: "WAGate (Meow): WhatsApp Gateway API",
+      id: "WAGate (Meow): WhatsApp Gateway API",
     },
     category: {
       en: "API & Microservice",
@@ -173,57 +173,57 @@ const projects: Project[] = [
       id: "Layanan WhatsApp Gateway untuk developer dan bisnis. Kirim pesan notifikasi otomatis, verifikasi kode OTP, dan terima webhook langsung dari aplikasi klien tanpa perlu menyewa atau mengelola server WA sendiri.",
     },
     metrics: [
-      "⚡ High-Concurrency Goroutines",
-      "🔄 Automated Webhook Dispatch",
-      "📱 Multi-Device QR Session",
-      "🛡️ Zero-Server Client Setup",
+      "High-Concurrency Goroutines",
+      "Automated Webhook Dispatch",
+      "Multi-Device QR Session",
+      "Zero-Server Client Setup",
     ],
     caseStudy: {
       problem: {
-        en: "Small businesses and indie developers need automated WhatsApp notifications and OTP verification, but official Cloud API rates or self-hosted server maintenance are prohibitively expensive and complex.",
-        id: "Bisnis UMKM dan pengembang membutuhkan pengiriman notifikasi otomatis serta verifikasi OTP WhatsApp, namun biaya WhatsApp Cloud API resmi atau pengelolaan server bot sendiri sangat mahal dan rumit.",
+        en: "Small businesses and indie developers need automated WhatsApp notifications and OTP verification, but official Cloud API rates or self-hosted server maintenance are costly and complex.",
+        id: "Bisnis UMKM dan pengembang membutuhkan pengiriman notifikasi otomatis serta verifikasi OTP WhatsApp, namun biaya WhatsApp Cloud API resmi atau pengelolaan server bot sendiri cukup mahal dan rumit.",
       },
       solution: {
-        en: "Developed a high-throughput WhatsApp Gateway API service in Go. Clients simply scan a QR code from the dashboard, integrate standard REST endpoints, and receive real-time webhook events for inbound messages and delivery status.",
-        id: "Membangun layanan WhatsApp Gateway API berkinerja tinggi menggunakan Go. Klien cukup memindai QR code dari dashboard, memanggil endpoint REST standar, dan menerima webhook real-time untuk pesan masuk serta status pengiriman.",
+        en: "Built a WhatsApp Gateway API service in Go. Clients scan a QR code from the dashboard, integrate standard REST endpoints, and receive webhook events for inbound messages and delivery status.",
+        id: "Membangun layanan WhatsApp Gateway API menggunakan Go. Klien memindai QR code dari dashboard, memanggil endpoint REST standar, dan menerima webhook untuk pesan masuk serta status pengiriman.",
       },
       decision: {
-        en: "Leveraged Go's native goroutines and channel architecture to manage persistent multi-device websocket connections concurrently with minimal memory footprint, preventing event loop blocking during high message volume spikes.",
-        id: "Memanfaatkan fitur Goroutines dan Channels bawaan Go untuk mengelola koneksi websocket multi-device secara konkuren dengan konsumsi memori minimal, mencegah lag/blocking saat terjadi lonjakan pengiriman pesan massal.",
+        en: "Used Go's native goroutines and channels to manage persistent multi-device websocket connections concurrently with minimal memory usage, preventing event loop blocking during message spikes.",
+        id: "Memanfaatkan fitur Goroutines dan Channels bawaan Go untuk mengelola koneksi websocket multi-device secara konkuren dengan konsumsi memori minimal, mencegah lag saat pengiriman pesan massal.",
       },
     },
     highlights: {
       en: [
-        "High-performance Go backend API for instant text messaging, media dispatch, and OTP verification",
-        "Reactive dashboard frontend built with Vue.js and shadcn/ui components",
-        "Database and realtime authentication/storage powered by Supabase",
-        "Real-time webhooks capturing incoming messages and delivery receipt status (delivered, read)",
-        "Stable automated multi-device QR connection & session management",
+        "Go backend API for text messaging, media dispatch, and OTP verification",
+        "Dashboard frontend built with Vue.js and shadcn/ui components",
+        "Database and authentication backed by Supabase",
+        "Webhooks capturing incoming messages and delivery receipt status (delivered, read)",
+        "Automated multi-device QR connection & session management",
       ],
       id: [
-        "Backend Go API berkinerja tinggi untuk pengiriman pesan teks, media, dan OTP instan",
-        "Frontend dashboard reaktif dibangun dengan Vue.js dan komponen shadcn/ui",
-        "Database & realtime auth/storage ditenagai oleh Supabase",
-        "Webhook real-time untuk menangkap pesan masuk dan event status pesan (delivered, read)",
-        "Multi-device QR connection & session management otomatis yang stabil",
+        "Backend Go API untuk pengiriman pesan teks, media, dan verifikasi OTP",
+        "Frontend dashboard dibangun dengan Vue.js dan komponen shadcn/ui",
+        "Database dan autentikasi menggunakan Supabase",
+        "Webhook untuk menangkap pesan masuk dan status pengiriman pesan (delivered, read)",
+        "Manajemen koneksi dan sesi multi-device QR secara otomatis",
       ],
     },
     tags: ["Golang", "Vue", "shadcn", "Supabase", "WhatsApp API", "REST API"],
     link: "https://wagate.habiburrahman.web.id/",
     screenshots: [
-      "/screenshoot/meow/wagate-1-landing.png",
-      "/screenshoot/meow/wagate-2-features.png",
-      "/screenshoot/meow/wagate-3-pricing.png",
-      "/screenshoot/meow/wagate-4-dashboard.png",
-      "/screenshoot/meow/wagate-5-api-docs.png",
-      "/screenshoot/meow/wagate-6-device.png",
+      "/screenshoot/meow/wagate-1-landing.webp",
+      "/screenshoot/meow/wagate-2-features.webp",
+      "/screenshoot/meow/wagate-3-pricing.webp",
+      "/screenshoot/meow/wagate-4-dashboard.webp",
+      "/screenshoot/meow/wagate-5-api-docs.webp",
+      "/screenshoot/meow/wagate-6-device.webp",
     ],
   },
   {
     id: "catatin",
     title: {
-      en: "Catatin — Turn WhatsApp Chats into Structured Data",
-      id: "Catatin — Ubah Chat WhatsApp Jadi Data Rapi",
+      en: "Catatin: Turn WhatsApp Chats into Structured Data",
+      id: "Catatin: Ubah Chat WhatsApp Jadi Data Rapi",
     },
     category: {
       en: "SaaS & Automation",
@@ -234,10 +234,10 @@ const projects: Project[] = [
       id: "Platform otomatisasi pengelolaan percakapan WhatsApp. Menautkan nomor WhatsApp bisnis agar setiap pesan masuk, bukti foto transfer/struk, dan kontak tercatat otomatis ke dalam panel data yang tertata rapi.",
     },
     metrics: [
-      "📊 Automated Order Parsing",
-      "⚡ Real-Time Supabase Sync",
-      "👥 Multi-Agent Collaboration",
-      "📁 Image Receipt Ingestion",
+      "Automated Order Parsing",
+      "Real-Time Supabase Sync",
+      "Multi-Agent Collaboration",
+      "Image Receipt Ingestion",
     ],
     caseStudy: {
       problem: {
@@ -255,15 +255,15 @@ const projects: Project[] = [
     },
     highlights: {
       en: [
-        "Go & Supabase architecture for high-throughput transactional data processing and storage",
-        "Clean and responsive user interface crafted with Vue.js and shadcn/ui",
+        "Go & Supabase architecture for transactional data processing and storage",
+        "User interface built with Vue.js and shadcn/ui",
         "Automated syncing for incoming chats, transaction receipt images, and customer contacts",
-        "Centralized data management dashboard for financial reconciliation and business bookkeeping",
-        "Multi-agent workspace for collaborative customer service and operations teams",
+        "Centralized data management dashboard for financial reconciliation and bookkeeping",
+        "Multi-agent workspace for customer service and operations teams",
       ],
       id: [
-        "Arsitektur Go & Supabase untuk pemrosesan dan penyimpanan data transaksi cepat",
-        "Antarmuka responsif dan rapi menggunakan Vue.js dan shadcn/ui",
+        "Arsitektur Go & Supabase untuk pemrosesan dan penyimpanan data transaksi",
+        "Antarmuka menggunakan Vue.js dan shadcn/ui",
         "Sinkronisasi otomatis pesan masuk, foto bukti transaksi, dan kontak pelanggan",
         "Panel manajemen data terpusat untuk rekonsiliasi keuangan dan pembukuan bisnis",
         "Multi-agent dashboard untuk operasional tim bisnis & customer service",
@@ -272,10 +272,126 @@ const projects: Project[] = [
     tags: ["Golang", "Vue", "shadcn", "Supabase", "WhatsApp Automation"],
     link: "https://catatin.habiburrahman.web.id/",
     screenshots: [
-      "/screenshoot/catatin/catatin-1-landing.png",
-      "/screenshoot/catatin/catatin-2-form.png",
-      "/screenshoot/catatin/catatin-3-data.png",
-      "/screenshoot/catatin/catatin-4-perangkat.png",
+      "/screenshoot/catatin/catatin-1-landing.webp",
+      "/screenshoot/catatin/catatin-2-form.webp",
+      "/screenshoot/catatin/catatin-3-data.webp",
+      "/screenshoot/catatin/catatin-4-perangkat.webp",
+    ],
+  },
+  {
+    id: "vetrico",
+    title: {
+      en: "Vetrico: Veterinary Clinic SaaS (SOAP & SNI)",
+      id: "Vetrico: SaaS Klinik Hewan & Rekam Medis SOAP",
+    },
+    category: {
+      en: "SaaS & Healthcare",
+      id: "SaaS & Healthcare",
+    },
+    desc: {
+      en: "Independently designed and built SaaS for veterinary clinics following SNI 9184:2023 and SOAP DPJP standards. Connects front-desk queues, medical records, pharmacy, inpatient flowsheet, grooming, and multi-branch billing.",
+      id: "Platform SaaS klinik hewan yang saya rancang mandiri agar sesuai standar rekam medis SOAP DPJP dan SNI 9184:2023. Menghubungkan antrean lobi, rekam medis, apotek, rawat inap, grooming, dan kasir multi-cabang.",
+    },
+    metrics: [
+      "SOAP DPJP & SNI 9184:2023",
+      "6-Digit PIN Record Lock",
+      "Inpatient Flowsheet & Pharmacy",
+      "Multi-Branch SaaS",
+    ],
+    caseStudy: {
+      problem: {
+        en: "Many veterinary clinics still use manual records or spreadsheets that do not meet Permentan No. 15/2021 and SNI 9184:2023 audit requirements, risking mixed-up prescriptions and unrecorded medicine usage.",
+        id: "Banyak klinik hewan masih memakai catatan manual atau Excel yang belum memenuhi standar audit rekam medis Permentan No. 15/2021 dan SNI 9184:2023, sehingga rentan resep tertukar dan stok obat tidak terlacak.",
+      },
+      solution: {
+        en: "Independently designed the clinical workflow and built the full-stack platform with Golang, Vue.js, and PostgreSQL. Covers vital-sign screening, SOAP forms with 6-digit DPJP PIN lock, pharmacy dispensing, inpatient ward flowsheets, and unified cashier billing.",
+        id: "Merancang mandiri alur operasional klinik dan membangun sistemnya dengan Golang, Vue.js, serta PostgreSQL. Mencakup skrining TTV awal, form SOAP dengan kunci PIN 6-digit DPJP, resep apotek otomatis, flowsheet rawat inap, hingga kasir terpadu.",
+      },
+      decision: {
+        en: "Structured the database and permissions around veterinary medicolegal rules (DPJP authorization and batch/stock deduction per prescription) while keeping daily forms fast on tablets and cashier PCs.",
+        id: "Menyusun struktur database dan hak akses mengikuti aturan medikolegal dokter hewan (otorisasi DPJP serta pemotongan stok obat otomatis per resep), dengan tampilan form yang ringan dibuka dari tablet maupun komputer kasir.",
+      },
+    },
+    highlights: {
+      en: [
+        "Independently designed system workflow aligned with SNI 9184:2023 & Permentan No. 15/2021",
+        "Front-desk queue with emergency priority, vital signs (temperature/weight), and multi-pet owner lookup",
+        "Standardized SOAP medical records locked with 6-digit attending veterinarian (DPJP) PIN",
+        "Automated pharmacy prescription queue, label printing, and inpatient ward observation flowsheet",
+        "Unified multi-payment cashier (cash, QRIS, transfer, split-bill) with multi-branch support",
+      ],
+      id: [
+        "Merancang sendiri alur sistem agar sesuai standar rekam medis SNI 9184:2023 & Permentan No. 15/2021",
+        "Antrean lobi dengan tanda kedaruratan, skrining TTV awal, dan pencarian pemilik multi-hewan",
+        "Rekam medis SOAP terstandar dengan kunci otorisasi PIN 6-digit atas nama dokter (DPJP)",
+        "Resep otomatis ke farmasi, cetak etiket obat, dan flowsheet observasi bangsal rawat inap",
+        "Kasir terpadu (tunai, QRIS, transfer, split-bill), modul grooming/pet hotel, dan dukungan multi-cabang",
+      ],
+    },
+    tags: ["Golang", "Vue.js", "PostgreSQL", "REST API", "SaaS"],
+    link: "https://vetrico.id/",
+    screenshots: [
+      "/screenshoot/vetrico/landingvetrico.webp",
+      "/screenshoot/vetrico/panel-kasir.webp",
+      "/screenshoot/vetrico/panel-manajemen-rawat-inap.webp",
+      "/screenshoot/vetrico/panelrwatinap.webp",
+    ],
+  },
+  {
+    id: "ohm-registration",
+    title: {
+      en: "OHM Registration: Course & Payment Portal",
+      id: "OHM Registration: Portal Kursus & Pembayaran",
+    },
+    category: {
+      en: "Client Web App",
+      id: "Aplikasi Web Klien",
+    },
+    desc: {
+      en: "Production web portal for a Japanese language course institution. Manages student registration, class groups and sessions, as well as manual transaction tracking and installment payments.",
+      id: "Portal web aktif untuk lembaga kursus bahasa Jepang. Mengelola pendaftaran siswa, pembagian grup dan sesi kelas, serta pencatatan transaksi pembayaran dan cicilan siswa secara manual.",
+    },
+    metrics: [
+      "Live Production App",
+      "Installment Tracking",
+      "Class Group & Sessions",
+      "Client Project",
+    ],
+    caseStudy: {
+      problem: {
+        en: "Course administrators needed a single system to organize incoming student cohorts into class sessions while tracking partial and installment payments that are paid manually.",
+        id: "Admin kursus membutuhkan satu sistem untuk membagi siswa baru ke dalam grup dan sesi kelas, sekaligus memantau status pembayaran dan cicilan yang transaksinya masih dilakukan manual.",
+      },
+      solution: {
+        en: "Developed a web registration and administration portal handling student intake, class group/session assignment, and structured installment payment logs.",
+        id: "Mengembangkan portal pendaftaran dan administrasi web yang menangani input data pendaftar, pengaturan grup/sesi kelas, serta pencatatan riwayat cicilan pembayaran siswa.",
+      },
+      decision: {
+        en: "Designed around manual payment verification workflows so admin staff can record transfers, update installment balances, and monitor unpaid dues without rigid payment gateway lock-in.",
+        id: "Merancang alur verifikasi pembayaran manual agar admin dapat mencatat bukti transfer, memperbarui sisa cicilan, dan memantau tagihan siswa sesuai operasional nyata di lapangan.",
+      },
+    },
+    highlights: {
+      en: [
+        "Student registration portal for Japanese language courses",
+        "Class group and schedule session management",
+        "Manual transaction recording and installment payment tracking",
+        "Live in production at daftarkelasohm.com",
+      ],
+      id: [
+        "Portal pendaftaran peserta kursus bahasa Jepang",
+        "Manajemen grup belajar dan pembagian sesi kelas",
+        "Pencatatan transaksi pembayaran manual dan pemantauan status cicilan",
+        "Digunakan aktif di produksi pada daftarkelasohm.com",
+      ],
+    },
+    tags: ["PHP", "Laravel", "MySQL", "Web App"],
+    link: "https://daftarkelasohm.com/",
+    screenshots: [
+      "/screenshoot/ohmreg/halamandaftar.webp",
+      "/screenshoot/ohmreg/paneldashboard.webp",
+      "/screenshoot/ohmreg/halamanverifikasi.webp",
+      "/screenshoot/ohmreg/panel-masterprogram.webp",
     ],
   },
 ];
@@ -283,15 +399,85 @@ const projects: Project[] = [
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = React.useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = React.useState<number>(0);
+  const [isExpandedImage, setIsExpandedImage] = React.useState<boolean>(false);
+  const [zoomLevel, setZoomLevel] = React.useState<number>(1);
+  const [pan, setPan] = React.useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = React.useState<boolean>(false);
+  const dragStartRef = React.useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const pinchDistRef = React.useRef<number | null>(null);
+  const imageViewportRef = React.useRef<HTMLDivElement | null>(null);
+
+  const resetZoom = () => {
+    setZoomLevel(1);
+    setPan({ x: 0, y: 0 });
+    setIsDragging(false);
+    pinchDistRef.current = null;
+  };
 
   const openModal = (p: Project) => {
     setSelectedProject(p);
     setActiveImageIndex(0);
+    setIsExpandedImage(false);
+    resetZoom();
   };
 
   const closeModal = () => {
+    resetZoom();
     setSelectedProject(null);
   };
+
+  const prevImage = () => {
+    if (!selectedProject || selectedProject.screenshots.length <= 1) return;
+    setActiveImageIndex((prev) => (prev - 1 + selectedProject.screenshots.length) % selectedProject.screenshots.length);
+    resetZoom();
+  };
+
+  const nextImage = () => {
+    if (!selectedProject || selectedProject.screenshots.length <= 1) return;
+    setActiveImageIndex((prev) => (prev + 1) % selectedProject.screenshots.length);
+    resetZoom();
+  };
+
+  const applyZoom = (nextZoom: number) => {
+    const clamped = Math.min(4, Math.max(1, Number(nextZoom.toFixed(2))));
+    setZoomLevel(clamped);
+    if (clamped <= 1) {
+      setPan({ x: 0, y: 0 });
+    }
+  };
+
+  React.useEffect(() => {
+    if (!selectedProject) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeModal();
+      } else if (e.key === "ArrowLeft") {
+        prevImage();
+      } else if (e.key === "ArrowRight") {
+        nextImage();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProject]);
+
+  React.useEffect(() => {
+    const el = imageViewportRef.current;
+    if (!el || !selectedProject) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.25 : -0.25;
+      setZoomLevel((prev) => {
+        const next = Math.min(4, Math.max(1, Number((prev + delta).toFixed(2))));
+        if (next <= 1) {
+          setPan({ x: 0, y: 0 });
+        }
+        return next;
+      });
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, [selectedProject, activeImageIndex]);
 
   return (
     <section id="projects" className="py-12 flex flex-col gap-8">
@@ -316,20 +502,24 @@ export function ProjectsSection() {
         {projects.map((proj) => (
           <Card
             key={proj.id}
-            className="flex flex-col justify-between hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all cursor-pointer group reveal bg-white"
+            role="button"
+            tabIndex={0}
+            aria-label={proj.title.id}
+            className="flex flex-col justify-between hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black transition-all cursor-pointer group reveal bg-white"
             onClick={() => openModal(proj)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal(proj);
+              }
+            }}
           >
             <CardHeader>
               <div className="flex items-center justify-between gap-2 mb-1">
-                <Badge variant="neutral" className="font-mono text-[11px] uppercase font-bold">
+                <Badge variant="neutral" className="font-mono text-xs uppercase font-bold">
                   <span data-lang-id>{proj.category.id}</span>
                   <span data-lang-en>{proj.category.en}</span>
                 </Badge>
-                {proj.screenshots.length > 0 && (
-                  <span className="text-[11px] font-mono font-bold bg-main px-2 py-0.5 border border-border rounded-sm shadow-neo-sm">
-                    {proj.screenshots.length} Screenshots
-                  </span>
-                )}
               </div>
               <CardTitle className="text-xl sm:text-2xl font-heading font-black group-hover:text-black">
                 <span data-lang-id>{proj.title.id}</span>
@@ -343,11 +533,12 @@ export function ProjectsSection() {
 
             <CardContent className="flex flex-col gap-3">
               {proj.screenshots.length > 0 && (
-                <div className="w-full aspect-[16/9] bg-black/5 border-2 border-border rounded-base overflow-hidden relative">
+                <div className="w-full aspect-[16/9] bg-black/10 border-2 border-border rounded-base overflow-hidden relative">
                   <img
                     src={proj.screenshots[0]}
                     alt={proj.title.en}
                     loading="lazy"
+                    decoding="async"
                     width={600}
                     height={338}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -360,7 +551,7 @@ export function ProjectsSection() {
                 {proj.metrics.map((m, idx) => (
                   <span
                     key={idx}
-                    className="text-[10px] sm:text-[11px] font-mono font-bold px-2 py-0.5 bg-yellow-100 border border-black rounded-sm shadow-[1px_1px_0px_#000]"
+                    className="text-xs font-mono font-bold px-2 py-0.5 bg-yellow-100 border border-black rounded-sm shadow-[1px_1px_0px_#000]"
                   >
                     {m}
                   </span>
@@ -372,7 +563,7 @@ export function ProjectsSection() {
                 {proj.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] sm:text-[11px] font-mono font-bold px-2 py-0.5 bg-secondary-background border border-border rounded-sm shadow-[1px_1px_0px_#000]"
+                    className="text-xs font-mono font-bold px-2 py-0.5 bg-secondary-background border border-border rounded-sm shadow-[1px_1px_0px_#000]"
                   >
                     {tag}
                   </span>
@@ -389,9 +580,9 @@ export function ProjectsSection() {
                     rel="noopener noreferrer"
                     aria-label={`Lihat repositori GitHub untuk ${proj.title.en}`}
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 px-2 py-1 bg-white border-2 border-black rounded-base text-[11px] font-heading font-black hover:bg-yellow-200 transition-all shadow-[1px_1px_0px_#000]"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border-2 border-black rounded-base text-xs font-heading font-black hover:bg-yellow-200 transition-all shadow-[1px_1px_0px_#000]"
                   >
-                    <span>GitHub ↗</span>
+                    <span>GitHub</span>
                   </a>
                 )}
                 {proj.link && (
@@ -401,9 +592,9 @@ export function ProjectsSection() {
                     rel="noopener noreferrer"
                     aria-label={`Buka live demo aplikasi ${proj.title.en}`}
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 px-2 py-1 bg-sky-200 border-2 border-black rounded-base text-[11px] font-heading font-black hover:bg-sky-300 transition-all shadow-[1px_1px_0px_#000]"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 bg-sky-200 border-2 border-black rounded-base text-xs font-heading font-black hover:bg-sky-300 transition-all shadow-[1px_1px_0px_#000]"
                   >
-                    <span>Demo ↗</span>
+                    <span>Demo</span>
                   </a>
                 )}
               </div>
@@ -413,8 +604,8 @@ export function ProjectsSection() {
                 className="font-heading font-black"
                 aria-label={`Pelajari arsitektur dan studi kasus ${proj.title.en}`}
               >
-                <span data-lang-id>Studi Kasus →</span>
-                <span data-lang-en>Case Study →</span>
+                <span data-lang-id>Studi Kasus</span>
+                <span data-lang-en>Case Study</span>
               </Button>
             </CardFooter>
           </Card>
@@ -444,28 +635,165 @@ export function ProjectsSection() {
                 </h3>
               </div>
               <Button variant="neutral" size="sm" onClick={closeModal} className="font-bold border-2 border-black">
-                <span data-lang-id>✕ Tutup</span>
-                <span data-lang-en>✕ Close</span>
+                <span data-lang-id>Tutup</span>
+                <span data-lang-en>Close</span>
               </Button>
             </div>
 
             {/* Screenshots Gallery if available */}
             {selectedProject.screenshots.length > 0 && (
               <div className="flex flex-col gap-3">
-                <div className="w-full aspect-[16/9] bg-black/5 border-2 border-border rounded-base overflow-hidden flex items-center justify-center">
+                <div
+                  ref={imageViewportRef}
+                  onMouseDown={(e) => {
+                    if (zoomLevel <= 1) return;
+                    e.preventDefault();
+                    setIsDragging(true);
+                    dragStartRef.current = { x: e.clientX - pan.x, y: e.clientY - pan.y };
+                  }}
+                  onMouseMove={(e) => {
+                    if (!isDragging || zoomLevel <= 1) return;
+                    setPan({
+                      x: e.clientX - dragStartRef.current.x,
+                      y: e.clientY - dragStartRef.current.y,
+                    });
+                  }}
+                  onMouseUp={() => setIsDragging(false)}
+                  onMouseLeave={() => setIsDragging(false)}
+                  onDoubleClick={() => {
+                    if (zoomLevel > 1) {
+                      resetZoom();
+                    } else {
+                      applyZoom(2);
+                    }
+                  }}
+                  onTouchStart={(e) => {
+                    if (e.touches.length === 2) {
+                      const dx = e.touches[0].clientX - e.touches[1].clientX;
+                      const dy = e.touches[0].clientY - e.touches[1].clientY;
+                      pinchDistRef.current = Math.hypot(dx, dy);
+                    } else if (e.touches.length === 1 && zoomLevel > 1) {
+                      setIsDragging(true);
+                      dragStartRef.current = {
+                        x: e.touches[0].clientX - pan.x,
+                        y: e.touches[0].clientY - pan.y,
+                      };
+                    }
+                  }}
+                  onTouchMove={(e) => {
+                    if (e.touches.length === 2 && pinchDistRef.current !== null) {
+                      e.preventDefault();
+                      const dx = e.touches[0].clientX - e.touches[1].clientX;
+                      const dy = e.touches[0].clientY - e.touches[1].clientY;
+                      const dist = Math.hypot(dx, dy);
+                      const scaleDelta = (dist - pinchDistRef.current) * 0.008;
+                      pinchDistRef.current = dist;
+                      applyZoom(zoomLevel + scaleDelta);
+                    } else if (e.touches.length === 1 && isDragging && zoomLevel > 1) {
+                      e.preventDefault();
+                      setPan({
+                        x: e.touches[0].clientX - dragStartRef.current.x,
+                        y: e.touches[0].clientY - dragStartRef.current.y,
+                      });
+                    }
+                  }}
+                  onTouchEnd={() => {
+                    pinchDistRef.current = null;
+                    setIsDragging(false);
+                  }}
+                  style={{ touchAction: zoomLevel > 1 ? "none" : "pan-y pinch-zoom" }}
+                  className={`w-full bg-black/5 border-2 border-border rounded-base overflow-hidden flex items-center justify-center relative select-none resize-y min-h-[220px] ${
+                    isExpandedImage ? "h-[60vh]" : "aspect-[16/9]"
+                  } ${zoomLevel > 1 ? (isDragging ? "cursor-grabbing" : "cursor-grab") : "cursor-zoom-in"}`}
+                >
                   <img
                     src={selectedProject.screenshots[activeImageIndex]}
                     alt={selectedProject.title.en}
-                    className="w-full h-full object-contain"
+                    draggable={false}
+                    style={{
+                      transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoomLevel})`,
+                      transformOrigin: "center center",
+                    }}
+                    className={`w-full h-full object-contain pointer-events-none ${
+                      isDragging ? "" : "transition-transform duration-100"
+                    }`}
                   />
                 </div>
+
+                {/* Image Controls Bar */}
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono font-bold">
+                  <div className="flex items-center gap-1.5">
+                    {selectedProject.screenshots.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={prevImage}
+                          className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                        >
+                          Prev
+                        </button>
+                        <span className="px-2 py-1 text-black/80">
+                          {activeImageIndex + 1} / {selectedProject.screenshots.length}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={nextImage}
+                          className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                        >
+                          Next
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => applyZoom(zoomLevel - 0.5)}
+                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                      aria-label="Perkecil gambar"
+                    >
+                      -
+                    </button>
+                    <span className="px-2 py-1 bg-main border-2 border-black rounded-sm min-w-[52px] text-center">
+                      {Math.round(zoomLevel * 100)}%
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => applyZoom(zoomLevel + 0.5)}
+                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                      aria-label="Perbesar gambar"
+                    >
+                      +
+                    </button>
+                    <button
+                      type="button"
+                      onClick={resetZoom}
+                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                    >
+                      Reset
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsExpandedImage((prev) => !prev)}
+                      className="px-2.5 py-1 bg-white border-2 border-black rounded-sm hover:bg-yellow-100 cursor-pointer"
+                    >
+                      <span data-lang-id>{isExpandedImage ? "Ukuran Normal" : "Perbesar Frame"}</span>
+                      <span data-lang-en>{isExpandedImage ? "Normal Size" : "Expand Frame"}</span>
+                    </button>
+                  </div>
+                </div>
+
                 {selectedProject.screenshots.length > 1 && (
                   <div className="flex items-center gap-2 overflow-x-auto pb-2">
                     {selectedProject.screenshots.map((shot, idx) => (
                       <button
                         key={shot}
-                        onClick={() => setActiveImageIndex(idx)}
-                        className={`size-16 flex-shrink-0 border-2 rounded-base overflow-hidden transition-all ${
+                        type="button"
+                        onClick={() => {
+                          setActiveImageIndex(idx);
+                          resetZoom();
+                        }}
+                        className={`size-16 flex-shrink-0 border-2 rounded-base overflow-hidden transition-all cursor-pointer ${
                           activeImageIndex === idx
                             ? "border-black ring-2 ring-main shadow-shadow scale-105"
                             : "border-border/60 opacity-60 hover:opacity-100"
@@ -486,7 +814,6 @@ export function ProjectsSection() {
             {/* Architecture & Engineering Case Study Box */}
             <div className="border-2 border-black rounded-base p-4 sm:p-5 bg-amber-50/70 shadow-[3px_3px_0px_#000] flex flex-col gap-3.5">
               <div className="flex items-center gap-2 border-b-2 border-black/20 pb-2">
-                <span className="text-lg">⚙️</span>
                 <h4 className="font-heading font-black text-sm sm:text-base uppercase tracking-tight text-black">
                   <span data-lang-id>Arsitektur Sistem & Keputusan Teknis</span>
                   <span data-lang-en>System Architecture & Engineering Decisions</span>
@@ -542,19 +869,17 @@ export function ProjectsSection() {
                 <span data-lang-id>Fitur Utama & Implementasi</span>
                 <span data-lang-en>Key Features & Implementation</span>
               </h4>
-              <ul data-lang-id className="flex flex-col gap-1.5">
+              <ul data-lang-id className="flex flex-col gap-1.5 list-disc pl-5">
                 {selectedProject.highlights.id.map((h, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-black/85 font-sans">
-                    <span className="font-black text-black">✓</span>
-                    <span>{h}</span>
+                  <li key={i} className="text-sm text-black/85 font-sans">
+                    {h}
                   </li>
                 ))}
               </ul>
-              <ul data-lang-en className="flex flex-col gap-1.5">
+              <ul data-lang-en className="flex flex-col gap-1.5 list-disc pl-5">
                 {selectedProject.highlights.en.map((h, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-black/85 font-sans">
-                    <span className="font-black text-black">✓</span>
-                    <span>{h}</span>
+                  <li key={i} className="text-sm text-black/85 font-sans">
+                    {h}
                   </li>
                 ))}
               </ul>
@@ -595,8 +920,8 @@ export function ProjectsSection() {
                     aria-label={`Buka repositori GitHub ${selectedProject.title.en}`}
                   >
                     <Button variant="default" size="sm" className="font-heading font-bold uppercase text-xs border-2 border-black shadow-neo-sm">
-                      <span data-lang-id>Kode Sumber / GitHub ↗</span>
-                      <span data-lang-en>GitHub Repository ↗</span>
+                      <span data-lang-id>Kode Sumber / GitHub</span>
+                      <span data-lang-en>GitHub Repository</span>
                     </Button>
                   </a>
                 )}
@@ -608,7 +933,7 @@ export function ProjectsSection() {
                     aria-label={`Buka demo online ${selectedProject.title.en}`}
                   >
                     <Button variant="neutral" size="sm" className="font-heading font-bold uppercase text-xs border-2 border-black shadow-neo-sm">
-                      Live Demo ↗
+                      Live Demo
                     </Button>
                   </a>
                 )}

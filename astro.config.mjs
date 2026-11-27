@@ -8,6 +8,9 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://habiburrahman.web.id',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [react()],
 
   vite: {

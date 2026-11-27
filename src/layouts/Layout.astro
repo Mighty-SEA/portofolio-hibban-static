@@ -158,13 +158,24 @@ const personSchema = {
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
-    <!-- Fonts: Outfit (Heading), Space Grotesk (Display), Inter (Sans) -->
+    <!-- Preload Hero Avatar -->
+    <link rel="preload" as="image" href="/foto-profil.webp" />
+
+    <!-- Fonts: Outfit (Heading), Space Grotesk (Display), Inter (Sans) - Non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@500;700;900&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@500;700;900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- JSON-LD Structured Data Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />

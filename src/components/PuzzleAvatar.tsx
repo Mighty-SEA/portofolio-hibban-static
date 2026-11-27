@@ -93,13 +93,16 @@ export function PuzzleAvatar() {
             alt="Foto Hibban Habiburrahman"
             width={320}
             height={480}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="w-full h-full object-cover object-top pointer-events-none group-hover:scale-102 transition-transform duration-300"
           />
 
           {/* Click Tag */}
           <div className="absolute top-2.5 right-2.5 bg-white border-2 border-black px-2 py-0.5 rounded-md shadow-neo-sm text-[10px] font-display font-black uppercase text-black animate-bounce pointer-events-none">
-            <span data-lang-id>Klik Foto! 💥</span>
-            <span data-lang-en>Click Photo! 💥</span>
+            <span data-lang-id>Klik Foto!</span>
+            <span data-lang-en>Click Photo!</span>
           </div>
         </div>
 
