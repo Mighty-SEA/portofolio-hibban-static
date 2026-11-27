@@ -36,7 +36,7 @@ A price recommendation platform for Tokopedia marketplace products using XGBoost
 ### 2. 4Paws — Veterinary Clinic & POS System
 Veterinary Clinic & Point of Sale management system for "4 Paws Pet Care".
 - **Architecture**: Dual deployment via Go Fiber (Cloud Web App) and Wails (Native Desktop GUI `.exe` for offline clinic use).
-- **Features**: Electronic Medical Records (EMR), Vaccination History, Veterinarian Queue, Inpatient/Hotel management, Inventory log, and Operational Reports.
+- **Features**: Electronic Medical Records (EMR), Vaccination History, Veterinarian Queue, Inpatient/Hotel management, FIFO/FEFO Inventory Audit, and Operational Reports.
 - **Demo**: [demo-petclinic.habiburrahman.web.id](https://demo-petclinic.habiburrahman.web.id/)
 
 ### 3. WAGate (Meow) — WhatsApp Gateway API
@@ -59,6 +59,6 @@ Independently designed SaaS clinic management platform aligned with SNI 9184:202
 
 ### 6. OHM Registration — Course & Payment Portal
 Production web portal for Japanese language course registration and student payment tracking.
-- **Tech**: PHP, Laravel, MySQL.
-- **Features**: Student registration, class group and session management, and manual installment payment tracking.
+- **Tech**: Golang, Vue.js, Tailwind CSS, PostgreSQL.
+- **Features**: Student registration, participant panel, class group/session management, and manual payment verification & installment tracking.
 - **Website**: [daftarkelasohm.com](https://daftarkelasohm.com/)
